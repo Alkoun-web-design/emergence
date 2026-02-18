@@ -5,7 +5,7 @@ export default function Page() {
   return (
     <div className="grid grid-cols-subgrid col-span-full">
       <Header />
-      <h1>Modules</h1>
+      {/* <h1>Modules</h1> */}
       <ModuleDetails />
     </div>
   )
