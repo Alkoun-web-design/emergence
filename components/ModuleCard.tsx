@@ -1,7 +1,7 @@
 export default function ModuleCard({ image, title, description, href }: {image:string; title: string; description: string; href: string;}) {
   return (
     // <div className="col-span-3 p-4 border-2 border-gray-900 rounded-md backdrop-blur-2xl bg-gray-100">
-    <div className="col-span-3 p-4 rounded-md backdrop-blur-2xl bg-gray-100 shadow-gray-900/30 shadow-xl mb-8 hover:shadow-2xl hover:-translate-y-1.5 duration-500 transition-all">
+    <div className="col-span-3 p-4 w-full mx-1 rounded-md backdrop-blur-2xl bg-gray-100 shadow-gray-900/30 shadow-xl mb-8 hover:shadow-2xl hover:-translate-y-1.5 duration-500 transition-all">
         <div className="h-48 w-full my-2">
             <img className="object-cover" src={image} alt={title} loading="lazy"/>
         </div>

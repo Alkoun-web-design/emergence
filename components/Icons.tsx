@@ -17,7 +17,7 @@ export function FullLogo() {
 
 export function Logo(){
     return (
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+        <svg xmlns="http://www.w3.org/2000/svg" className="h-10" fill="none" viewBox="0 0 20 20">
             <path d="M8 5c0-3 2-5 2-5s2 2 2 5-2 5-2 5-2-2-2-5Z" fill="#E3E9C5"/>
             <path d="M15 8c3 0 5 2 5 2s-2 2-5 2-5-2-5-2 2-2 5-2ZM5 8c3 0 5 2 5 2s-2 2-5 2-5-2-5-2 2-2 5-2Z" fill="#E3E9C5"/>
             <path d="M8 15c0-3 2-5 2-5s2 2 2 5-2 5-2 5-2-2-2-5Z" fill="#E3E9C5"/>

@@ -1,10 +1,9 @@
 import ModuleCard from "./ModuleCard"
-import Link from "next/link"
 
-export default function BestSelling() {
+export default function NewCourses() {
     return (
-        <div className="grid grid-cols-subgrid col-start-2 col-end-12 justify-items-center">
-            <h2 className="col-span-full text-3xl my-16">Best Selling</h2>
+        <div className="grid grid-cols-subgrid col-span-full justify-items-center bg-gray-100">
+            <h2 className="col-span-full text-3xl my-16">New Additions</h2>
             <ModuleCard title="Hey there" description="Things arent always what they seem" image="/cardimage.jpg" href="/"/>
             <ModuleCard title="Hey there" description="Things arent always what they seem" image="/cardimage.jpg" href="/"/>
             <ModuleCard title="Hey there" description="Things arent always what they seem" image="/cardimage.jpg" href="/"/>
