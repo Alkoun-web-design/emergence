@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 // import Hero from "../components/Hero";
+import BackgroundAnimation from "@/components/BackgroundAnimation";
+import Header from "@/components/Header";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -26,10 +28,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased grid grid-cols-12 gap-6 col-span-full bg-gray-300`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased grid grid-cols-12 gap-6 col-span-full bg-gray-300 text-gray-900`}
       >
-        <main className="grid grid-cols-subgrid col-span-full">
-          {/* <Hero /> */}
+        <div className="fixed -z-20 top-0 left-0 h-screen w-full bg-linear-to-b from-lime-300 via-lime-400 to-lime-500">
+          <BackgroundAnimation />
+        </div>
+        <main className="grid grid-cols-subgrid col-span-full backdrop-blur-xs">
+          <Header /> 
           {children}
         </main>
       </body>
