@@ -1,8 +1,15 @@
+import { FullLogo } from "@/components/Icons";
+
 export default function Hero() {
     return (
         <>
-            <div className="grid grid-cols-subgrid col-start-2 col-end-12 h-screen">
-                <h1 className="text-5xl leading-tight">Welcome to Emergence</h1>
+            <div className="grid grid-cols-subgrid justify-items-center col-start-2 col-end-12 ">
+                <div className="col-span-full pt-80">
+                    <FullLogo />
+                </div>
+                <div className="col-span-full pb-80">
+                    <p className="text-2xl">Experience the re-awakening...</p>
+                </div>
             </div>
         </>
     )

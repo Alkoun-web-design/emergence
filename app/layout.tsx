@@ -30,7 +30,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased grid grid-cols-12 gap-6 col-span-full bg-gray-300 text-gray-900`}
       >
-        <div className="fixed -z-20 top-0 left-0 h-screen w-full bg-linear-to-b from-lime-300 via-lime-400 to-lime-500">
+        <div className="fixed -z-20 top-0 left-0 h-screen w-full bg-linear-to-b from-lime-100 via-lime-200 to-lime-300">
           <BackgroundAnimation />
         </div>
         <main className="grid grid-cols-subgrid col-span-full backdrop-blur-xs">
