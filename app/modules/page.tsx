@@ -6,11 +6,11 @@ export default function Page() {
     <div className="grid grid-cols-subgrid col-span-full">
       <Header />
       <h1>Modules</h1>
-      <ModuleCard title="Hey there" description="Things arent always what they seem" image="/cardimage.jpg" href="/"/>
-      <ModuleCard title="Hey there" description="Things arent always what they seem" image="/cardimage.jpg" href="/"/>
-      <ModuleCard title="Hey there" description="Things arent always what they seem" image="/cardimage.jpg" href="/"/>
-      <ModuleCard title="Hey there" description="Things arent always what they seem" image="/cardimage.jpg" href="/"/>
-      <ModuleCard title="Hey there" description="Things arent always what they seem" image="/cardimage.jpg" href="/"/>
+      <ModuleCard name="Hey there" description="Things arent always what they seem" image="/cardimage.jpg" slug="/"/>
+      <ModuleCard name="Hey there" description="Things arent always what they seem" image="/cardimage.jpg" slug="/"/>
+      <ModuleCard name="Hey there" description="Things arent always what they seem" image="/cardimage.jpg" slug="/"/>
+      <ModuleCard name="Hey there" description="Things arent always what they seem" image="/cardimage.jpg" slug="/"/>
+      <ModuleCard name="Hey there" description="Things arent always what they seem" image="/cardimage.jpg" slug="/"/>
     </div>
   )
 }

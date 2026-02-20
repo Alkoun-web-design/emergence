@@ -7,13 +7,14 @@ import Header from "@/components/Header";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
+  weight: "200",
   subsets: ["latin"],
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+// const geistMono = Geist_Mono({
+//   variable: "--font-geist-mono",
+//   subsets: ["latin"],
+// });
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -28,7 +29,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased grid grid-cols-12 gap-6 col-span-full bg-gray-300 text-gray-900`}
+        className={`${geistSans.variable} antialiased grid grid-cols-12 gap-6 col-span-full bg-gray-300 text-gray-900`}
       >
         <div className="fixed -z-20 top-0 left-0 h-screen w-full bg-linear-to-b from-gray-100 via-lime-100 to-lime-200">
           <BackgroundAnimation />
