@@ -14,7 +14,7 @@ export default function BackgroundAnimation() {
                 repeat: Infinity,
                 // repeatDelay: 1,
             }} 
-            className="bg-linear-to-t from-lime-200 via-lime-100 h-6 w-6 rounded-full">
+            className="bg-linear-to-t from-white via-lime-100 h-6 w-6 rounded-full">
         </motion.div>
         <motion.div 
             initial={{ y: 20 }} 
@@ -25,7 +25,7 @@ export default function BackgroundAnimation() {
                 repeat: Infinity,
                 // repeatDelay: 1,
             }} 
-            className="bg-linear-to-t from-lime-200 via-lime-100 h-4 w-4 rounded-full">
+            className="bg-linear-to-t from-white via-lime-100 h-4 w-4 rounded-full">
         </motion.div>
         <motion.div 
             initial={{ y: 20 }} 
@@ -36,7 +36,7 @@ export default function BackgroundAnimation() {
                 repeat: Infinity,
                 // repeatDelay: 1,
             }} 
-            className="bg-linear-to-t from-lime-200 via-lime-100 h-3 w-3 rounded-full">
+            className="bg-linear-to-t from-white via-lime-100 h-3 w-3 rounded-full">
         </motion.div>
         <motion.div 
             initial={{ y: 20 }} 
@@ -47,7 +47,7 @@ export default function BackgroundAnimation() {
                 repeat: Infinity,
                 // repeatDelay: 1,
             }} 
-            className="bg-linear-to-t from-lime-200 via-lime-100 h-5 w-5 rounded-full">
+            className="bg-linear-to-t from-white via-lime-100 h-5 w-5 rounded-full">
         </motion.div>
         <motion.div 
             initial={{ y: 20 }} 
@@ -58,7 +58,7 @@ export default function BackgroundAnimation() {
                 repeat: Infinity,
                 // repeatDelay: 1,
             }} 
-            className="bg-linear-to-t from-lime-200 via-lime-100 h-4 w-4 rounded-full">
+            className="bg-linear-to-t from-white via-lime-100 h-4 w-4 rounded-full">
         </motion.div>
         <motion.div 
             initial={{ y: 20 }} 
@@ -69,7 +69,7 @@ export default function BackgroundAnimation() {
                 repeat: Infinity,
                 // repeatDelay: 1,
             }} 
-            className="bg-linear-to-t from-lime-200 via-lime-100 h-3 w-3 rounded-full">
+            className="bg-linear-to-t from-white via-lime-100 h-3 w-3 rounded-full">
         </motion.div>
         <motion.div 
             initial={{ y: 20 }} 
@@ -80,7 +80,7 @@ export default function BackgroundAnimation() {
                 repeat: Infinity,
                 // repeatDelay: 1,
             }} 
-            className="bg-linear-to-t from-lime-200 via-lime-100 h-6 w-6 rounded-full">
+            className="bg-linear-to-t from-white via-lime-100 h-6 w-6 rounded-full">
         </motion.div>
         <motion.div 
             initial={{ y: 20 }} 
@@ -91,7 +91,7 @@ export default function BackgroundAnimation() {
                 repeat: Infinity,
                 // repeatDelay: 1,
             }} 
-            className="bg-linear-to-t from-lime-200 via-lime-100 h-5 w-5 rounded-full">
+            className="bg-linear-to-t from-white via-lime-100 h-5 w-5 rounded-full">
         </motion.div>
         <motion.div 
             initial={{ y: 20 }} 
@@ -102,7 +102,7 @@ export default function BackgroundAnimation() {
                 repeat: Infinity,
                 // repeatDelay: 1,
             }} 
-            className="bg-linear-to-t from-lime-200 via-lime-100 h-5 w-5 rounded-full">
+            className="bg-linear-to-t from-white via-lime-100 h-5 w-5 rounded-full">
         </motion.div>
         <motion.div 
             initial={{ y: 20 }} 
@@ -113,7 +113,7 @@ export default function BackgroundAnimation() {
                 repeat: Infinity,
                 // repeatDelay: 1,
             }} 
-            className="bg-linear-to-t from-lime-200 via-lime-100 h-6 w-6 rounded-full">
+            className="bg-linear-to-t from-white via-lime-100 h-6 w-6 rounded-full">
         </motion.div>
         <motion.div 
             initial={{ y: 20 }} 
@@ -124,7 +124,7 @@ export default function BackgroundAnimation() {
                 repeat: Infinity,
                 // repeatDelay: 1,
             }} 
-            className="bg-linear-to-t from-lime-200 via-lime-100 h-4 w-4 rounded-full">
+            className="bg-linear-to-t from-white via-lime-100 h-4 w-4 rounded-full">
         </motion.div>
         <motion.div 
             initial={{ y: 20 }} 
@@ -135,7 +135,7 @@ export default function BackgroundAnimation() {
                 repeat: Infinity,
                 // repeatDelay: 1,
             }} 
-            className="bg-linear-to-t from-lime-200 via-lime-100 h-5 w-5 rounded-full">
+            className="bg-linear-to-t from-white via-lime-100 h-5 w-5 rounded-full">
         </motion.div>
         <motion.div 
             initial={{ y: 20 }} 
@@ -146,7 +146,7 @@ export default function BackgroundAnimation() {
                 repeat: Infinity,
                 // repeatDelay: 1,
             }} 
-            className="bg-linear-to-t from-lime-200 via-lime-100 h-3 w-3 rounded-full">
+            className="bg-linear-to-t from-white via-lime-100 h-3 w-3 rounded-full">
         </motion.div>
         <motion.div 
             initial={{ y: 20 }} 
@@ -157,7 +157,7 @@ export default function BackgroundAnimation() {
                 repeat: Infinity,
                 // repeatDelay: 1,
             }} 
-            className="bg-linear-to-t from-lime-200 via-lime-100 h-5 w-5 rounded-full">
+            className="bg-linear-to-t from-white via-lime-100 h-5 w-5 rounded-full">
         </motion.div>
     </div>
   )

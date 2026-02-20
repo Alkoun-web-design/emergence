@@ -1,12 +1,12 @@
-export default function ModuleCard({ image, title, description, href }: {image:string; title: string; description: string; href: string;}) {
+export default function ModuleCard({ image, name, description, slug }: {image:string; name: string; description: string; slug: string;}) {
   return (
     // <div className="col-span-3 p-4 border-2 border-gray-900 rounded-md backdrop-blur-2xl bg-gray-100">
-    <div className="col-span-3 p-4 w-full mx-1 rounded-md backdrop-blur-2xl bg-gray-100 shadow-gray-900/30 shadow-xl mb-8 hover:shadow-2xl hover:-translate-y-1.5 duration-500 transition-all">
+    <div className="col-span-4 p-4 w-full mx-1 rounded-md backdrop-blur-2xl bg-gray-100 shadow-gray-900/30 shadow-xl mb-8 hover:shadow-2xl hover:-translate-y-1.5 duration-500 transition-all">
         <div className="h-48 w-full my-2">
-            <img className="object-cover" src={image} alt={title} loading="lazy"/>
+            <img className="object-cover" src={image} alt={name} loading="lazy"/>
         </div>
         <div className="my-2">
-            <h4 className="text-2xl">{title}</h4>
+            <h4 className="text-2xl">{name}</h4>
             <p>{description}</p>
         </div>
         <div>
