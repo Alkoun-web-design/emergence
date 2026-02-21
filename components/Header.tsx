@@ -8,15 +8,18 @@ export default function Header(){
                 <FullLogo />
             </span>
             <nav className="inline-grid grid-cols-subgrid col-span-10 justify-content-around my-auto font-medium">
-                <ul className="col-span-8 flex flex-row justify-around text-nowrap">
+                <ul className="col-span-7 flex flex-row justify-around text-nowrap">
                     <li className="mx-4 hover:bg-[#C1CAA0] hover:text-gray-50 transition-all duration-300 px-4 py-2 rounded-md"><Link href="/">Home</Link></li>
                     <li className="mx-4 hover:bg-[#C1CAA0] hover:text-gray-50 transition-all duration-300 px-4 py-2 rounded-md"><Link href="/modules">Our Modules</Link><ArrowDown/></li>
                     <li className="mx-4 hover:bg-[#C1CAA0] hover:text-gray-50 transition-all duration-300 px-4 py-2 rounded-md"><Link href="/about-emergence">About Emergence</Link></li>
                     <li className="mx-4 hover:bg-[#C1CAA0] hover:text-gray-50 transition-all duration-300 px-4 py-2 rounded-md"><Link href="/contact-us">Contact Us</Link></li>
                 </ul>
+                <ul className="col-span-1 flex flex-row justify-center text-nowrap">
+                    <li className="mx-1 bg-gray-900 text-gray-50 hover:bg-[#C1CAA0] hover:text-gray-50 transition-all duration-300 px-4 py-2 rounded-md">Sign In</li>
+                </ul>
                 <ul className="col-span-2 flex flex-row justify-around">
-                    <li className="mx-4 hover:text-[#C1CAA0] transition-all duration-300 px-4 py-2 rounded-md"><Link href="/"><InstagramColored/></Link></li>
-                    <li className="mx-4 hover:text-[#C1CAA0] transition-all duration-300 px-4 py-2 rounded-md"><Link href="/"><LinkedInBlue/></Link></li>
+                    <li className="mx-1 hover:text-[#C1CAA0] transition-all duration-300 px-2 py-2 rounded-md"><Link href="/"><InstagramColored/></Link></li>
+                    <li className="mx-1 hover:text-[#C1CAA0] transition-all duration-300 px-2 py-2 rounded-md"><Link href="/"><LinkedInBlue/></Link></li>
                 </ul>
             </nav>
         </header>
