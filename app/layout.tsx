@@ -7,7 +7,7 @@ import Header from "@/components/Header";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
-  weight: "200",
+  weight: ["200"],
   subsets: ["latin"],
 });
 
@@ -29,11 +29,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} antialiased grid grid-cols-12 gap-6 col-span-full bg-gray-300 text-gray-900`}
+        className={`${geistSans.variable} antialiased grid grid-cols-12 gap-6 col-span-full bg-gray-50 text-gray-900`}
       >
-        <div className="fixed -z-20 top-0 left-0 h-screen w-full bg-linear-to-b from-gray-100 via-lime-100 to-lime-200">
+        {/* <div className="fixed -z-20 top-0 left-0 h-screen w-full bg-linear-to-b from-gray-100 via-lime-100 to-lime-200">
           <BackgroundAnimation />
-        </div>
+        </div> */}
         <main className="grid grid-cols-subgrid col-span-full backdrop-blur-xs">
           <Header /> 
           {children}
