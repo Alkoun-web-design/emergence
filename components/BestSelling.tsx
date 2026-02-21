@@ -7,13 +7,29 @@ export default function BestSelling() {
         <div className="grid grid-cols-subgrid col-span-full justify-content-center">
             <h2 className="col-span-full text-3xl text-center my-16">Best Selling</h2>
             <div className="grid grid-cols-12 col-start-2 col-end-12 gap-4 justify-content-center">
-                <ModuleCard name="Hey there" description="Things arent always what they seem" image="/cardimage.jpg" slug="/"/>
-                <ModuleCard name="Hey there" description="Things arent always what they seem" image="/cardimage.jpg" slug="/"/>
                 <ModuleCard 
                     name="Hey there" 
                     description="Things arent always what they seem" 
-                    image="/cardimage.jpg" 
-                    slug="/"
+                    image="/images/workshops/3.jpg" 
+                    slug="/test"
+                    price="24.00"
+                    discount={true}
+                    discountPrice="18.00"
+                />
+                <ModuleCard 
+                    name="Hey there" 
+                    description="Things arent always what they seem" 
+                    image="/images/workshops/2.jpg"
+                    slug="/test"
+                    price="24.00"
+                    discount={true}
+                    discountPrice="18.00"
+                />
+                <ModuleCard 
+                    name="Hey there" 
+                    description="Things arent always what they seem" 
+                    image="/images/workshops/1.jpg" 
+                    slug="/test"
                     price="24.00"
                     discount={true}
                     discountPrice="18.00"
