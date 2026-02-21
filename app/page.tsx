@@ -9,13 +9,13 @@ export default function Home() {
   return (
     <>
       <Hero />
-      <div className="grid grid-cols-subgrid col-span-full bg-gray-100 pb-20">
+      <div className="grid grid-cols-subgrid col-span-full bg-gray-50 pb-20">
         <NewCourses />
       </div>
-      <div className="grid grid-cols-subgrid col-span-full bg-gray-100 pb-20">
+      <div className="grid grid-cols-subgrid col-span-full bg-gray-50 pb-20">
         <CategoriesSection />
       </div>
-      <div className="grid grid-cols-subgrid col-span-full bg-gray-100 pb-20">
+      <div className="grid grid-cols-subgrid col-span-full bg-gray-50 pb-20">
         <BestSelling />
       </div>
       <Stats />
