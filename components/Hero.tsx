@@ -6,7 +6,7 @@ export default function Hero() {
     return (
         <>
             <div className="grid grid-cols-subgrid justify-items-center col-start-2 col-end-12 ">
-                <div className="col-span-full pt-60">
+                <div className="col-span-full pt-70">
                     <HeroLogo />
                 </div>
                 <motion.div
