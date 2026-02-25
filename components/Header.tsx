@@ -8,6 +8,15 @@ export default function Header(){
 
     const [isHoverMenuVisible, setIsHoverMenuVisible] = useState(false);
     const [emailAddress, setEmailAddress] = useState('');
+    const signInModalRef = useRef(null);
+
+    function closeSigInModal(){
+        if (signInModalRef !== null) signInModalRef.current?.close();
+    }
+
+    function showSigInModal(){
+        if (signInModalRef !== null) signInModalRef.current?.showModal();
+    }
 
     async function signIn(){
         try {
@@ -47,7 +56,7 @@ export default function Header(){
                     <li className="mx-4 hover:bg-primary hover:text-gray-50 transition-all duration-300 px-4 py-2 rounded-md"><Link href="/about-emergence">About Emergence</Link></li>
                     <li className="mx-4 hover:bg-primary hover:text-gray-50 transition-all duration-300 px-4 py-2 rounded-md"><Link href="/contact-us">Contact Us</Link></li>
                 </ul>
-                <ul className="col-span-1 flex flex-row justify-center text-nowrap">
+                <ul className="col-span-1 flex flex-row justify-center text-nowrap" onClick={showSigInModal}>
                     <li className="mx-1 bg-gray-900 text-gray-50 hover:bg-primary hover:cursor-pointer hover:text-gray-50 transition-all duration-300 px-4 py-2 rounded-md"></li>
                     <button >Sign In</button>
                 </ul>
@@ -56,12 +65,12 @@ export default function Header(){
                     <li className="mx-1 hover:text-primary transition-all duration-300 px-2 py-2 rounded-md"><Link href="/"><LinkedInBlue/></Link></li>
                 </ul>
             </nav>
-            <dialog open id="sigin-modal" className="border border-primary rounded-lg py-8 px-12 w-fit h-hit shadow-xl shadow-gary-900/40 mx-auto mt-20">
-                <div className="mt-2 mb-8">
-                    <button className="bg-gray-900 text-gray-50 rounded-md px-3 py-1 font-semibold" formMethod="dialog" value="close">
+            <dialog id="sigin-modal" ref={signInModalRef} className="backdrop-blur border border-primary rounded-lg py-8 px-12 w-fit h-hit shadow-xl shadow-gary-900/40 mx-auto mt-20">
+                <form method="dialog" className="mt-2 mb-8">
+                    <button onClick={closeSigInModal} className="bg-gray-900 text-gray-50 rounded-md px-3 py-1 font-semibold hover:cursor-pointer hover:bg-primary transition-all duration-300" formMethod="dialog" value="close">
                         X
                     </button>
-                </div>
+                </form>
                 <h2 className="text-xl text-center">Sign In with your Email</h2>
                 <form className="">
                     <div className="my-6">
@@ -69,7 +78,7 @@ export default function Header(){
                         <input name="email" type="email"className="border border-primary rounded-md p-1" onChange={(e) => setEmailAddress(e)}></input>
                     </div>
                     <div className="flex my-6 justify-center">
-                        <button onClick={signIn} className="block px-4 py-2 bg-gray-900 text-gray-50 hover:bg-primary hover:-translate-y-2 hover:shadow-lg transition-all duration-300 rounded-lg font-semibold">
+                        <button onClick={signIn} className="block px-4 py-2 bg-gray-900 text-gray-50 hover:bg-primary hover:-translate-y-2 hover:shadow-lg transition-all duration-300 rounded-lg font-semibold hover:cursor-pointer">
                             Sign in
                         </button>
                         <p></p>
