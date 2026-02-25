@@ -7,26 +7,27 @@ import { useState, useRef } from "react"
 export default function Header(){
 
     const [isHoverMenuVisible, setIsHoverMenuVisible] = useState(false);
-    const [emailAddress, setEmailAddress] = useState('');
-    const signInModalRef = useRef(null);
+    //const [emailAddress, setEmailAddress] = useState('');
+    const emailAddressRef = useRef<HTMLInputElement>(null);
+    const signInModalRef = useRef<HTMLDialogElement>(null);
 
     function closeSigInModal(){
-        if (signInModalRef !== null) signInModalRef.current?.close();
+        if (signInModalRef.current) signInModalRef.current.close();
     }
 
     function showSigInModal(){
-        if (signInModalRef !== null) signInModalRef.current?.showModal();
+        if (signInModalRef.current) signInModalRef.current?.showModal();
     }
 
     async function signIn(){
         try {
-            const response = await fetch('', 
+            const response = await fetch('http://localhost:3000/api/', 
                 {
                     method: 'POST',
                     headers: {
                         'Content-type': 'application/json',
                     },
-                    body: emailAddress,
+                    body: emailAddressRef.current?.value,
                 },
             )
             const data = await response.json();
@@ -75,7 +76,7 @@ export default function Header(){
                 <form className="">
                     <div className="my-6">
                         <label htmlFor="email" className="mr-2">Email</label>
-                        <input name="email" type="email"className="border border-primary rounded-md p-1" onChange={(e) => setEmailAddress(e)}></input>
+                        <input ref={emailAddressRef} name="email" type="email"className="border border-primary rounded-md p-1" value={ emailAddressRef.current?.value }></input>
                     </div>
                     <div className="flex my-6 justify-center">
                         <button onClick={signIn} className="block px-4 py-2 bg-gray-900 text-gray-50 hover:bg-primary hover:-translate-y-2 hover:shadow-lg transition-all duration-300 rounded-lg font-semibold hover:cursor-pointer">
