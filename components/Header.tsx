@@ -19,9 +19,27 @@ export default function Header(){
         if (signInModalRef.current) signInModalRef.current?.showModal();
     }
 
+    async function signUp(){
+        try {
+            const response = await fetch('http://localhost:3000/api/signup', 
+                {
+                    method: 'POST',
+                    headers: {
+                        'Content-type': 'application/json',
+                    },
+                    body: emailAddressRef.current?.value,
+                },
+            )
+            const data = await response.json();
+            return data 
+        } catch (error) {
+            return "There was a problem, We couldn't sign you in."
+        }
+    } 
+
     async function signIn(){
         try {
-            const response = await fetch('http://localhost:3000/api/', 
+            const response = await fetch('http://localhost:3000/api/signin', 
                 {
                     method: 'POST',
                     headers: {
