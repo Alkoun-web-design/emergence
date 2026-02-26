@@ -76,8 +76,7 @@ export default function Header(){
                     <li className="mx-4 hover:bg-primary hover:text-gray-50 transition-all duration-300 px-4 py-2 rounded-md"><Link href="/contact-us">Contact Us</Link></li>
                 </ul>
                 <ul className="col-span-1 flex flex-row justify-center text-nowrap" onClick={showSigInModal}>
-                    <li className="mx-1 bg-gray-900 text-gray-50 hover:bg-primary hover:cursor-pointer hover:text-gray-50 transition-all duration-300 px-4 py-2 rounded-md"></li>
-                    <button >Sign In</button>
+                    <li className="mx-1 bg-gray-900 text-gray-50 hover:bg-primary hover:cursor-pointer hover:text-gray-50 transition-all duration-300 px-4 py-2 rounded-md"><button >Sign In</button></li>
                 </ul>
                 <ul className="col-span-2 flex flex-row justify-around">
                     <li className="mx-1 hover:text-primary transition-all duration-300 px-2 py-2 rounded-md"><Link href="/"><InstagramColored/></Link></li>
@@ -100,10 +99,14 @@ export default function Header(){
                         <button onClick={signIn} className="block px-4 py-2 bg-gray-900 text-gray-50 hover:bg-primary hover:-translate-y-2 hover:shadow-lg transition-all duration-300 rounded-lg font-semibold hover:cursor-pointer">
                             Sign in
                         </button>
+                    </div>
+                    <div className="flex my-6 justify-center">
                         <p>Or if you dont have an account...</p>
-                        <button onClick={signUp} className="block px-4 py-2 bg-gray-900 text-gray-50 hover:bg-primary hover:-translate-y-2 hover:shadow-lg transition-all duration-300 rounded-lg font-semibold hover:cursor-pointer">
+                        <button onClick={signUp} className="mx-2 block px-4 py-2 bg-gray-900 text-gray-50 hover:bg-primary hover:-translate-y-2 hover:shadow-lg transition-all duration-300 rounded-lg font-semibold hover:cursor-pointer">
                             Sign Up
                         </button>
+                    </div>
+                    <div className="flex my-6 justify-center">
                         <p></p>
                     </div>
                 </form>
