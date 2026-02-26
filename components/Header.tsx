@@ -21,7 +21,7 @@ export default function Header(){
 
     async function signUp(){
         try {
-            const response = await fetch('http://localhost:3000/api/signup', 
+            const response = await fetch('https://localhost:3000/api/signup', 
                 {
                     method: 'POST',
                     headers: {
@@ -99,6 +99,10 @@ export default function Header(){
                     <div className="flex my-6 justify-center">
                         <button onClick={signIn} className="block px-4 py-2 bg-gray-900 text-gray-50 hover:bg-primary hover:-translate-y-2 hover:shadow-lg transition-all duration-300 rounded-lg font-semibold hover:cursor-pointer">
                             Sign in
+                        </button>
+                        <p>Or if you dont have an account...</p>
+                        <button onClick={signUp} className="block px-4 py-2 bg-gray-900 text-gray-50 hover:bg-primary hover:-translate-y-2 hover:shadow-lg transition-all duration-300 rounded-lg font-semibold hover:cursor-pointer">
+                            Sign Up
                         </button>
                         <p></p>
                     </div>
