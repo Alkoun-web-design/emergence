@@ -1,4 +1,6 @@
-export default function ModuleCard({ image, name, description, price, discount, discountPrice, slug }: {image:string; name: string; description: string; price: string, discount: boolean, discountPrice: string, slug: string;}) {
+import Link from "next/link"
+
+export default function ModuleCard({ name, image, imageAlt, description, price, discountPrice, slug }: {name: string; image:string; imageAlt:string, description: string; price: string, discountPrice: string | null, slug: string;}) {
   return (
     // <div className="col-span-3 p-4 border-2 border-gray-900 rounded-md backdrop-blur-2xl bg-gray-100">
     <div className="col-span-4 w-full mx-1 rounded-md backdrop-blur-2xl bg-gray-100 shadow-gray-900/30 border border-primary mb-8 hover:shadow-lg hover:-translate-y-1.5 duration-500 transition-all">
@@ -7,14 +9,14 @@ export default function ModuleCard({ image, name, description, price, discount, 
         </div>
         <div className="my-2 p-4">
             <h4 className="text-2xl">{name}</h4>
-            <p>{description}</p>
+            <p className='my-4 text-gray-600 text-sm md:text-base'>{description}</p>
         </div>
         <div className="p-4">
             <img className="h-20 w-20 rounded-full" src="/" alt="speaker"/>
         </div>
         <div className="flex my-2 p-4">
-            <button className="py-2 px-4 rounded-lg bg-gray-900 hover:bg-primary hover:cursor-pointer text-gray-100 font-semibold transition-all duration-300">Enroll Now</button>
-            { discount ? (
+            <Link href="/enroll"><button className="py-2 px-4 rounded-lg bg-gray-900 hover:bg-primary hover:cursor-pointer text-gray-100 font-semibold transition-all duration-300">Enroll Now</button></Link>
+            { discountPrice ? (
                 <><span className="mx-2">{price}</span><span className="mx-2">{discountPrice}</span></>
             ) : (
             <span className="mx-2">{price}</span>

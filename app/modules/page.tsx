@@ -1,5 +1,7 @@
 import Header from "@/components/Header"
 import ModuleCard from "@/components/ModuleCard"
+import {modules} from "@/lib/modules"
+import type { Module } from "@/lib/modules"
 
 export default function Page() {
   return (
@@ -8,61 +10,19 @@ export default function Page() {
           Our Modules
         </h1>
       <div className="grid grid-cols-subgrid col-span-full">
-        <ModuleCard 
-          name="Hey there" 
-          description="Things arent always what they seem" 
-          image="/images/workshops/1.jpg" 
-          slug="/test"
-          price="24.00"
-          discount={true}
-          discountPrice="18.00"
-        />
-        <ModuleCard 
-          name="Hey there" 
-          description="Things arent always what they seem" 
-          image="/images/workshops/2.jpg" 
-          slug="/test"
-          price="24.00"
-          discount={true}
-          discountPrice="18.00"
-        />
-        <ModuleCard 
-          name="Hey there" 
-          description="Things arent always what they seem" 
-          image="/images/workshops/3.jpg" 
-          slug="/test"
-          price="24.00"
-          discount={true}
-          discountPrice="18.00"
-        />
-        <ModuleCard 
-          name="Hey there" 
-          description="Things arent always what they seem" 
-          image="/images/workshops/4.jpg" 
-          slug="/test"
-          price="24.00"
-          discount={true}
-          discountPrice="18.00"
-        />      
-        <ModuleCard 
-          name="Hey there" 
-          description="Things arent always what they seem" 
-          image="/images/workshops/5.jpg" 
-          slug="/test"
-          price="24.00"
-          discount={true}
-          discountPrice="18.00"
-        />
-        <ModuleCard 
-          name="Hey there" 
-          description="Things arent always what they seem" 
-          image="/images/workshops/6.png" 
-          slug="/test"
-          price="24.00"
-          discount={true}
-          discountPrice="18.00"
-        />
-      </div>
+
+        { modules.map((module:Module) => (
+          <ModuleCard 
+            name={module.name} 
+            description={module.description} 
+            image={module.image}
+            imageAlt={module.imageAlt} 
+            slug={module.slug}
+            price={module.price}
+            discountPrice={module.discountPrice}
+          />
+        ))}
+        </div>
     </div>
   )
 }
