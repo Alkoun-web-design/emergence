@@ -93,16 +93,16 @@ export default function Header(){
                 <form className="">
                     <div className="my-6">
                         <label htmlFor="email" className="mr-2">Email</label>
-                        <input ref={emailAddressRef} name="email" type="email"className="border border-primary rounded-md p-1" value={ emailAddressRef.current?.value }></input>
+                        <input ref={emailAddressRef} name="email" type="email" className="border border-primary rounded-md p-1 w-full" value={ emailAddressRef.current?.value }></input>
                     </div>
                     <div className="flex my-6 justify-center">
-                        <button onClick={signIn} className="block px-4 py-2 bg-gray-900 text-gray-50 hover:bg-primary hover:-translate-y-2 hover:shadow-lg transition-all duration-300 rounded-lg font-semibold hover:cursor-pointer">
+                        <button onClick={signIn} className="px-6 py-2 bg-gray-900 text-gray-50 hover:bg-primary hover:-translate-y-2 hover:shadow-lg transition-all duration-300 rounded-lg font-semibold hover:cursor-pointer">
                             Sign in
                         </button>
                     </div>
-                    <div className="flex my-6 justify-center">
+                    <div className="flex my-6 justify-center align-end">
                         <p>Or if you dont have an account...</p>
-                        <button onClick={signUp} className="mx-2 block px-4 py-2 bg-gray-900 text-gray-50 hover:bg-primary hover:-translate-y-2 hover:shadow-lg transition-all duration-300 rounded-lg font-semibold hover:cursor-pointer">
+                        <button onClick={signUp} className="mx-2 px-6 py-2 bg-gray-900 text-gray-50 hover:bg-primary hover:-translate-y-2 hover:shadow-lg transition-all duration-300 rounded-lg font-semibold hover:cursor-pointer">
                             Sign Up
                         </button>
                     </div>
