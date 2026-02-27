@@ -181,3 +181,33 @@ export function InstagramColored(){
         </svg>
     )
 }
+
+export function CreditCard() {
+    return (
+        <svg xmlns="http://www.w3.org/2000/svg" width={24} height={24} viewBox="0 0 24 24">
+        	<g fill="none" stroke="currentColor" strokeWidth={1.5}>
+        		<path d="M2 12c0-3.771 0-5.657 1.172-6.828S6.229 4 10 4h4c3.771 0 5.657 0 6.828 1.172S22 8.229 22 12s0 5.657-1.172 6.828S17.771 20 14 20h-4c-3.771 0-5.657 0-6.828-1.172S2 15.771 2 12Z"></path>
+        		<path strokeLinecap="round" d="M10 16H6m8 0h-1.5M2 10h20"></path>
+        	</g>
+        </svg>
+    )
+}
+
+export function Menu() {
+    return(
+        <svg xmlns="http://www.w3.org/2000/svg" width={24} height={24} viewBox="0 0 24 24">
+        	<path fill="currentColor" fillRule="evenodd" d="M20.75 7a.75.75 0 0 1-.75.75H4a.75.75 0 0 1 0-1.5h16a.75.75 0 0 1 .75.75m0 5a.75.75 0 0 1-.75.75H4a.75.75 0 0 1 0-1.5h16a.75.75 0 0 1 .75.75m0 5a.75.75 0 0 1-.75.75H4a.75.75 0 0 1 0-1.5h16a.75.75 0 0 1 .75.75" clipRule="evenodd"></path>
+        </svg>
+    )
+}
+
+export function Clock(){
+    return (
+        <svg xmlns="http://www.w3.org/2000/svg" width={24} height={24} viewBox="0 0 24 24">
+        	<g fill="none" stroke="currentColor" strokeWidth={1.5}>
+        		<circle cx={12} cy={12} r={10}></circle>
+        		<path strokeLinecap="round" strokeLinejoin="round" d="M12 8v4l2.5 2.5"></path>
+        	</g>
+        </svg>
+    )
+}
