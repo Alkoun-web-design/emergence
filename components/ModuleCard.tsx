@@ -22,7 +22,7 @@ export default function ModuleCard({ name, image, description, price, discountPr
                     Enroll Now { discountPrice ? <><span className="mx-1">{price}</span><span className="mx-1">{discountPrice}USD</span></> : <span className="mx-2">{price}USD</span> }
                 </button>
             </Link>
-            <Link className="justify-end ml-auto" href="/modules">
+            <Link className="justify-end ml-auto" href="/test">
                 <button className="mb-auto py-2 px-4 rounded-lg bg-gray-900 hover:bg-primary hover:cursor-pointer text-gray-100 font-semibold transition-all duration-300">
                     Read Details
                 </button>
