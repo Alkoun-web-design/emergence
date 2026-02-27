@@ -3,16 +3,13 @@ import {JSX} from 'react'
 export type Speaker = {
     name: string,
     image: string,
-    imageAlt: string,
     description: string,
 }
 
 export type Module = {
     name: string,
-    // description: JSX.Element,
     description: string,
     image: string,
-    imageAlt:  string,
     price: string,
     discountPrice: string | null,
     status: string,
@@ -29,7 +26,6 @@ export const speakers: Speaker[] = [
     {
         name: 'Hajra Raza',
         image: "/speakers/hajra-raza.webp",
-        imageAlt: 'string',
         description: 'string',
     },
 
@@ -40,7 +36,6 @@ export const modules: Module[] = [
         name: '10-Month Therapeutic Discussion Series on Relational and Integrative Psychotherapy in Pakistan',
         description: "This 10-month Therapeutic  Discussion Series offers a reflective space for psychotherapists, counsellors, and trainees in Pakistan to engage with their work through a relational and integrative lens. The series responds to the relative isolation many practitioners experience and the limited opportunities for sustained, thoughtful dialogue across levels of experience and diverse therapeutic orientations.",
         image: '/images/workshops/1.jpg',
-        imageAlt: 'Counselling With Iqras website',
         price: '20.00',
         discountPrice: null,
         status: 'Complete',
@@ -52,8 +47,8 @@ export const modules: Module[] = [
     },
     {
         name: 'Dancing with the devil: Accepting our inner-demons',
-        description: "This 10-month Therapeutic  Discussion Series offers a reflective space for psychotherapists, counsellors, and trainees in Pakistan to engage with their work through a relational and integrative lens. The series responds to the relative isolation many practitioners experience and the limited opportunities for sustained, thoughtful dialogue across levels of experience and diverse therapeutic orientations.",        image: '/images/workshops/2.jpg',
-        imageAlt: 'Counselling With Iqras website',
+        description: "This 10-month Therapeutic  Discussion Series offers a reflective space for psychotherapists, counsellors, and trainees in Pakistan to engage with their work through a relational and integrative lens. The series responds to the relative isolation many practitioners experience and the limited opportunities for sustained, thoughtful dialogue across levels of experience and diverse therapeutic orientations.",        
+        image: '/images/workshops/2.jpg',
         price: '20.00',
         discountPrice: null,
         status: 'Complete',
@@ -65,8 +60,8 @@ export const modules: Module[] = [
     },
     {
         name: 'Peace and Conflict within the soul',
-        description: "This 10-month Therapeutic  Discussion Series offers a reflective space for psychotherapists, counsellors, and trainees in Pakistan to engage with their work through a relational and integrative lens. The series responds to the relative isolation many practitioners experience and the limited opportunities for sustained, thoughtful dialogue across levels of experience and diverse therapeutic orientations.",        image: '/images/workshops/3.jpg',
-        imageAlt: 'Counselling With Iqras website',
+        description: "This 10-month Therapeutic  Discussion Series offers a reflective space for psychotherapists, counsellors, and trainees in Pakistan to engage with their work through a relational and integrative lens. The series responds to the relative isolation many practitioners experience and the limited opportunities for sustained, thoughtful dialogue across levels of experience and diverse therapeutic orientations.",        
+        image: '/images/workshops/3.jpg',
         price: '20.00',
         discountPrice: null,
         status: 'Complete',
@@ -78,8 +73,8 @@ export const modules: Module[] = [
     },
     {
         name: 'The body follows the mind: How to re-program for a better you',
-        description: "This 10-month Therapeutic  Discussion Series offers a reflective space for psychotherapists, counsellors, and trainees in Pakistan to engage with their work through a relational and integrative lens. The series responds to the relative isolation many practitioners experience and the limited opportunities for sustained, thoughtful dialogue across levels of experience and diverse therapeutic orientations.",        image: '/images/workshops/4.jpg',
-        imageAlt: 'Counselling With Iqras website',
+        description: "This 10-month Therapeutic  Discussion Series offers a reflective space for psychotherapists, counsellors, and trainees in Pakistan to engage with their work through a relational and integrative lens. The series responds to the relative isolation many practitioners experience and the limited opportunities for sustained, thoughtful dialogue across levels of experience and diverse therapeutic orientations.",        
+        image: '/images/workshops/4.jpg',
         price: '20.00',
         discountPrice: null,
         status: 'Complete',
@@ -91,8 +86,8 @@ export const modules: Module[] = [
     },
     {
         name: 'I wish I would have never met you: How trauma shapes regret',
-        description: "This 10-month Therapeutic  Discussion Series offers a reflective space for psychotherapists, counsellors, and trainees in Pakistan to engage with their work through a relational and integrative lens. The series responds to the relative isolation many practitioners experience and the limited opportunities for sustained, thoughtful dialogue across levels of experience and diverse therapeutic orientations.",        image: '/images/workshops/5.jpg',
-        imageAlt: 'Counselling With Iqras website',
+        description: "This 10-month Therapeutic  Discussion Series offers a reflective space for psychotherapists, counsellors, and trainees in Pakistan to engage with their work through a relational and integrative lens. The series responds to the relative isolation many practitioners experience and the limited opportunities for sustained, thoughtful dialogue across levels of experience and diverse therapeutic orientations.",        
+        image: '/images/workshops/5.jpg',
         price: '20.00',
         discountPrice: null,
         status: 'Complete',
@@ -104,8 +99,8 @@ export const modules: Module[] = [
     },
     {
         name: 'Why love and hate are the two sides of the smae coin',
-        description: "This 10-month Therapeutic  Discussion Series offers a reflective space for psychotherapists, counsellors, and trainees in Pakistan to engage with their work through a relational and integrative lens. The series responds to the relative isolation many practitioners experience and the limited opportunities for sustained, thoughtful dialogue across levels of experience and diverse therapeutic orientations.",        image: '/images/workshops/6.png',
-        imageAlt: 'Counselling With Iqras website',
+        description: "This 10-month Therapeutic  Discussion Series offers a reflective space for psychotherapists, counsellors, and trainees in Pakistan to engage with their work through a relational and integrative lens. The series responds to the relative isolation many practitioners experience and the limited opportunities for sustained, thoughtful dialogue across levels of experience and diverse therapeutic orientations.",        
+        image: '/images/workshops/6.png',
         price: '20.00',
         discountPrice: '15.00',
         status: 'Complete',

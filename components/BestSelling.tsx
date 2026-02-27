@@ -17,7 +17,6 @@ export default function BestSelling() {
                         name={module.name} 
                         description={module.description} 
                         image={module.image}
-                        imageAlt={module.imageAlt} 
                         slug={module.slug}
                         price={module.price}
                         discountPrice={module.discountPrice}
