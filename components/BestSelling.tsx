@@ -1,5 +1,9 @@
 import ModuleCard from "./ModuleCard"
+import {modules} from "@/lib/modules"
+import type { Module } from "@/lib/modules"
 import Link from "next/link"
+
+// const sortedModules = modules.sort((a:Module, b:Module) => a.modulesSold > b.modulesSold);
 
 export default function BestSelling() {
     return (
@@ -7,38 +11,21 @@ export default function BestSelling() {
         <div className="grid grid-cols-subgrid col-span-full justify-content-center">
             <h2 className="col-span-full text-3xl text-center my-16">Best Selling</h2>
             <div className="grid grid-cols-12 col-start-2 col-end-12 gap-4 justify-content-center">
-                <ModuleCard 
-                    name="Hey there" 
-                    description="Things arent always what they seem" 
-                    image="/images/workshops/3.jpg" 
-                    slug="/test"
-                    price="24.00"
-                    discount={true}
-                    discountPrice="18.00"
-                />
-                <ModuleCard 
-                    name="Hey there" 
-                    description="Things arent always what they seem" 
-                    image="/images/workshops/2.jpg"
-                    slug="/test"
-                    price="24.00"
-                    discount={true}
-                    discountPrice="18.00"
-                />
-                <ModuleCard 
-                    name="Hey there" 
-                    description="Things arent always what they seem" 
-                    image="/images/workshops/1.jpg" 
-                    slug="/test"
-                    price="24.00"
-                    discount={true}
-                    discountPrice="18.00"
-                />
-                {/* <ModuleCard name="Hey there" description="Things arent always what they seem" image="/cardimage.jpg" slug="/"/>
-                <ModuleCard name="Hey there" description="Things arent always what they seem" image="/cardimage.jpg" slug="/"/> */}
-                <button className="font-semibold w-fit text-nowrap py-4 px-8 my-16 bg-gray-900 text-gray-100 rounded-xl shadow-gray-900/40 hover:shadow-md hover:cursor-pointer hover:bg-[#C1CAA0] hover:-translate-y-1 transition-all duration-300">
+                { modules.map((module:Module) => (
+                    <ModuleCard 
+                        key={module.name}
+                        name={module.name} 
+                        description={module.description} 
+                        image={module.image}
+                        imageAlt={module.imageAlt} 
+                        slug={module.slug}
+                        price={module.price}
+                        discountPrice={module.discountPrice}
+                    />  
+                ))}
+                <Link href="/modules"><button className="font-semibold w-fit text-nowrap py-4 px-8 my-16 bg-gray-900 text-gray-100 rounded-xl shadow-gray-900/40 hover:shadow-md hover:cursor-pointer hover:bg-[#C1CAA0] hover:-translate-y-1 transition-all duration-300">
                     Explore Modules
-                </button>
+                </button></Link>
             </div>
         </div>
         </>

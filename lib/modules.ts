@@ -17,11 +17,12 @@ export type Module = {
     discountPrice: string | null,
     status: string,
     slug: string,
-    createdAt?:  string,
-    updatedAt?: string,
+    createdAt:  string,
+    updatedAt: string,
     id?: string,
     published: boolean,
     speakers: Speaker[],
+    modulesSold?: number,
 }
 
 export const speakers: Speaker[] = [
