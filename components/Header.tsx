@@ -1,7 +1,7 @@
 'use client'
 
 import Link from "next/link"
-import { ArrowDown, FullLogo, LinkedInBlue, InstagramColored } from "@/components/Icons"
+import { ArrowDown, HeaderLogo, LinkedInBlue, InstagramColored } from "@/components/Icons"
 import { useState, useRef } from "react"
 
 export default function Header(){
@@ -58,7 +58,7 @@ export default function Header(){
     return (
         <header className="grid grid-cols-subgrid col-span-full place-content-center px-4 pt-4">
             <span className="col-span-2">
-                <FullLogo />
+                <HeaderLogo />
             </span>
             <nav className="inline-grid grid-cols-subgrid col-span-10 justify-content-around my-auto font-semibold align-middle">
                 <ul className="col-span-7 flex flex-row justify-around text-nowrap">

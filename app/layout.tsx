@@ -4,6 +4,7 @@ import "./globals.css";
 // import Hero from "../components/Hero";
 import BackgroundAnimation from "@/components/BackgroundAnimation";
 import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -32,6 +33,7 @@ export default function RootLayout({
         <main className="grid grid-cols-subgrid col-span-full backdrop-blur-xs">
           <Header /> 
           {children}
+          <Footer />
         </main>
       </body>
     </html>

@@ -20,6 +20,7 @@ export type Module = {
     published: boolean,
     speakers: Speaker[],
     modulesSold?: number,
+    category?: string
 }
 
 export const speakers: Speaker[] = [

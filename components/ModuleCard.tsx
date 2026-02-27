@@ -7,26 +7,28 @@ export default function ModuleCard({ name, image, description, price, discountPr
             <img className="object-cover h-76" src={image} alt={name} loading="lazy"/>
         </div>
         <div className="p-2">
-            <h3 className="my-1 text-lg text-justify font-semibold leading-6">{name}</h3>
-            <p className="my-1 text-xs">Date: </p>
-        </div>
-        <div className="p-2 h-30 w-full text-wrap overflow-hidden ">
-            <p className='my-2 text-gray-600 text-sm md:text-base'>{description}</p>
-        </div>
-        <div className="p-2">
-            <img className="h-16 w-16 rounded-full" src="/" alt="speaker"/>
-        </div>
-        <div className="flex flex-row my-2 p-2">
-            <Link className="justify-start" href="/enroll">
-                <button className="mb-auto py-2 px-4 rounded-lg bg-gray-900 hover:bg-primary hover:cursor-pointer text-gray-100 font-semibold transition-all duration-300">
-                    Enroll Now { discountPrice ? <><span className="mx-1">{price}</span><span className="mx-1">{discountPrice}USD</span></> : <span className="mx-2">{price}USD</span> }
-                </button>
-            </Link>
-            <Link className="justify-end ml-auto" href="/test">
-                <button className="mb-auto py-2 px-4 rounded-lg bg-gray-900 hover:bg-primary hover:cursor-pointer text-gray-100 font-semibold transition-all duration-300">
-                    Read Details
-                </button>
-            </Link>
+            <div className="p-2">
+                <h3 className="my-1 text-lg text-justify font-semibold leading-6">{name}</h3>
+                <p className="my-1 text-xs">Date: </p>
+            </div>
+            <div className="p-2 h-30 w-full text-wrap truncate">
+                <p className='my-2 text-gray-600 text-sm md:text-base'>{description}</p>
+            </div>
+            {/* <Link className="justify-end ml-auto" href="/test">
+                    <button className="mb-auto py-2 px-4 rounded-lg bg-gray-900 hover:bg-primary hover:cursor-pointer text-gray-100 font-semibold transition-all duration-300">
+                        Read Details
+                    </button>
+                </Link> */}
+            <div className="m-2">
+                <img className="h-16 w-16 rounded-full" src="/" alt="speaker"/>
+            </div>
+            <div className="flex flex-row my-2 p-2">
+                <Link className="justify-start" href="/enroll">
+                    <button className="mb-auto py-2 px-4 rounded-lg bg-gray-900 hover:bg-primary hover:cursor-pointer text-gray-100 font-semibold transition-all duration-300">
+                        Enroll Now { discountPrice ? <><span className="mx-1">{price}</span><span className="mx-1">{discountPrice}USD</span></> : <span className="mx-2">{price}USD</span> }
+                    </button>
+                </Link>
+            </div>
         </div>
     </div>
   )
