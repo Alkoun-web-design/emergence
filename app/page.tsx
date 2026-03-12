@@ -19,6 +19,9 @@ export default function Home() {
         <BestSelling />
       </div>
       <Stats />
+      <div className="grid grid-cols-subgrid col-span-full bg-gray-50 pb-20">
+        <button>Checking</button>
+      </div>
     </>
   );
 }
