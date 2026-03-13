@@ -7,8 +7,8 @@ import { useState, useRef } from "react"
 export default function Header(){
 
     const [isHoverMenuVisible, setIsHoverMenuVisible] = useState(false);
-    //const [emailAddress, setEmailAddress] = useState('');
-    const emailAddressRef = useRef<HTMLInputElement>(null);
+    const [emailAddress, setEmailAddress] = useState<string>('');
+    // const emailAddressRef = useRef<HTMLInputElement>(null);
     const signInModalRef = useRef<HTMLDialogElement>(null);
 
     function closeSigInModal(){
@@ -19,16 +19,16 @@ export default function Header(){
         if (signInModalRef.current) signInModalRef.current?.showModal();
     }
 
-    async function signUp(e: React.SubmitEvent<HTMLButtonElement>){
+    async function signUp(e: React.MouseEvent<HTMLButtonElement>){
         e.preventDefault();
         try {
-            const response = await fetch('https://localhost:3000/api/signup', 
+            const response = await fetch('https://localhost:3000/api/sign-up', 
                 {
                     method: 'POST',
                     headers: {
                         'Content-type': 'application/json',
                     },
-                    body: emailAddressRef.current?.value,
+                    body: emailAddress
                 },
             )
             const data = await response.json();
@@ -39,7 +39,7 @@ export default function Header(){
         }
     } 
 
-    async function signIn(e: React.SubmitEvent<HTMLButtonElement>){
+    async function signIn(e: React.MouseEvent<HTMLButtonElement>){
         e.preventDefault();
         try {
             const response = await fetch('http://localhost:3000/api/sign-in', 
@@ -48,7 +48,7 @@ export default function Header(){
                     headers: {
                         'Content-type': 'application/json',
                     },
-                    body: emailAddressRef.current?.value,
+                    body: emailAddress
                 },
             )
             const data = await response.json();
@@ -107,17 +107,17 @@ export default function Header(){
                 <form className="">
                     <div className="my-6">
                         <label htmlFor="email" className="mr-2">Email</label>
-                        {/* <input ref={emailAddressRef} name="email" type="email" className="border border-primary rounded-md p-1 w-full" value={ emailAddressRef.current?.value }></input> */}
-                        <input ref={emailAddressRef} name="email" placeholder="Your email address"type="email" className="border border-primary rounded-md p-1 w-full" onChange={() => emailAddressRef.current?.value}></input>
+                        <input name="email" type="email" placeholder="Your email address" className="border border-primary rounded-md p-1 w-full" value={emailAddress} onChange={(e) => setEmailAddress(e.target.value) }></input>
+                        {/* <input ref={emailAddressRef} name="email" placeholder="Your email address" type="email" className="border border-primary rounded-md p-1 w-full"></input> */}
                     </div>
                     <div className="flex my-6 justify-center">
-                        <button onSubmit={signIn} className="px-6 py-2 bg-gray-900 text-gray-50 hover:bg-primary hover:-translate-y-2 hover:shadow-lg transition-all duration-300 rounded-lg font-semibold hover:cursor-pointer">
+                        <button onClick={signIn} className="px-6 py-2 bg-gray-900 text-gray-50 hover:bg-primary hover:-translate-y-2 hover:shadow-lg transition-all duration-300 rounded-lg font-semibold hover:cursor-pointer">
                             Sign in
                         </button>
                     </div>
                     <div className="flex my-6 justify-center align-end">
                         <p>Or if you dont have an account...</p>
-                        <button onSubmit={signUp} className="mx-2 px-6 py-2 bg-gray-900 text-gray-50 hover:bg-primary hover:-translate-y-2 hover:shadow-lg transition-all duration-300 rounded-lg font-semibold hover:cursor-pointer">
+                        <button onClick={signUp} className="mx-2 px-6 py-2 bg-gray-900 text-gray-50 hover:bg-primary hover:-translate-y-2 hover:shadow-lg transition-all duration-300 rounded-lg font-semibold hover:cursor-pointer">
                             Sign Up
                         </button>
                     </div>
