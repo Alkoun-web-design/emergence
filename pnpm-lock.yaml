@@ -8,6 +8,9 @@ importers:
 
   .:
     dependencies:
+      loops:
+        specifier: ^6.2.1
+        version: 6.2.1
       motion:
         specifier: ^12.34.2
         version: 12.34.2(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
@@ -1499,6 +1502,10 @@ packages:
 
   lodash.merge@4.6.2:
     resolution: {integrity: sha512-0KpjqXRVvrYyCsX1swR/XTK0va6VQkQM6MNo7PqW77ByjAhoARA8EfrP1N4+KlKj8YS0ZUCtRT/YUuhyYDujIQ==}
+
+  loops@6.2.1:
+    resolution: {integrity: sha512-UF321fEmlX7KeGlbjxXnL49hk8gVyMqHB2sbeEiEbHyacHYJN20NRh0f2FQSvW2r9X9/xpKBwO5gFYqy5ztauQ==}
+    engines: {node: '>=18'}
 
   loose-envify@1.4.0:
     resolution: {integrity: sha512-lyuxPGr/Wfhrlem2CL/UcnUc1zcqKAImBDzukY7Y5F/yQiNdko6+fRLevlw1HgMySw7f611UIY408EtxRSoK3Q==}
@@ -3511,6 +3518,8 @@ snapshots:
       p-locate: 5.0.0
 
   lodash.merge@4.6.2: {}
+
+  loops@6.2.1: {}
 
   loose-envify@1.4.0:
     dependencies:

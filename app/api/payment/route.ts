@@ -1,4 +1,7 @@
-export default async function GET() {
+import { NextRequest, NextResponse } from "next/server";
+import { LoopsClient } from "loops";
+
+export default async function POST() {
     try {
         const response = await fetch('https://app.loops.so/api/v1/api-key', {
             headers: {
