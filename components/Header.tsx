@@ -19,7 +19,8 @@ export default function Header(){
         if (signInModalRef.current) signInModalRef.current?.showModal();
     }
 
-    async function signUp(){
+    async function signUp(e: React.SubmitEvent<HTMLButtonElement>){
+        e.preventDefault();
         try {
             const response = await fetch('https://localhost:3000/api/signup', 
                 {
@@ -38,7 +39,8 @@ export default function Header(){
         }
     } 
 
-    async function signIn(){
+    async function signIn(e: React.SubmitEvent<HTMLButtonElement>){
+        e.preventDefault();
         try {
             const response = await fetch('http://localhost:3000/api/sign-in', 
                 {
@@ -74,15 +76,25 @@ export default function Header(){
                             <Link href="/modules"><li className="py-4 px-8 hover:bg-primary hover:text-gray-50">Category 4</li></Link>
                         </ul>
                     </li>
-                    <li className="mx-4 hover:bg-primary hover:text-gray-50 transition-all duration-300 px-4 py-2 rounded-md"><Link href="/about-emergence">About Emergence</Link></li>
-                    <li className="mx-4 hover:bg-primary hover:text-gray-50 transition-all duration-300 px-4 py-2 rounded-md"><Link href="/contact-us">Contact Us</Link></li>
+                    <li className="mx-4 hover:bg-primary hover:text-gray-50 transition-all duration-300 px-4 py-2 rounded-md">
+                        <Link href="/about-emergence">About Emergence</Link>
+                    </li>
+                    <li className="mx-4 hover:bg-primary hover:text-gray-50 transition-all duration-300 px-4 py-2 rounded-md">
+                        <Link href="/contact-us">Contact Us</Link>
+                    </li>
                 </ul>
                 <ul className="col-span-1 flex flex-row justify-center text-nowrap" onClick={showSigInModal}>
-                    <li className="mx-1 bg-gray-900 text-gray-50 hover:bg-primary hover:cursor-pointer hover:text-gray-50 transition-all duration-300 px-4 py-2 rounded-md"><button >Sign In</button></li>
+                    <li className="mx-1 bg-gray-900 text-gray-50 hover:bg-primary hover:cursor-pointer hover:text-gray-50 transition-all duration-300 px-4 py-2 rounded-md">
+                        <button>Sign In</button>
+                    </li>
                 </ul>
                 <ul className="col-span-2 flex flex-row justify-around">
-                    <li className="mx-1 hover:text-primary transition-all duration-300 px-2 py-2 rounded-md"><Link href="/"><InstagramColored/></Link></li>
-                    <li className="mx-1 hover:text-primary transition-all duration-300 px-2 py-2 rounded-md"><Link href="/"><LinkedInBlue/></Link></li>
+                    <li className="mx-1 hover:text-primary transition-all duration-300 px-2 py-2 rounded-md">
+                        <Link href="/"><InstagramColored/></Link>
+                    </li>
+                    <li className="mx-1 hover:text-primary transition-all duration-300 px-2 py-2 rounded-md">
+                        <Link href="/"><LinkedInBlue/></Link>
+                    </li>
                 </ul>
             </nav>
             <dialog id="sigin-modal" ref={signInModalRef} className="backdrop-blur border border-primary rounded-lg py-8 px-12 w-fit h-hit shadow-xl shadow-gary-900/40 mx-auto mt-20">
@@ -96,16 +108,16 @@ export default function Header(){
                     <div className="my-6">
                         <label htmlFor="email" className="mr-2">Email</label>
                         {/* <input ref={emailAddressRef} name="email" type="email" className="border border-primary rounded-md p-1 w-full" value={ emailAddressRef.current?.value }></input> */}
-                        <input ref={emailAddressRef} name="email" type="email" className="border border-primary rounded-md p-1 w-full" onChange={() => emailAddressRef.current?.value}></input>
+                        <input ref={emailAddressRef} name="email" placeholder="Your email address"type="email" className="border border-primary rounded-md p-1 w-full" onChange={() => emailAddressRef.current?.value}></input>
                     </div>
                     <div className="flex my-6 justify-center">
-                        <button onClick={signIn} className="px-6 py-2 bg-gray-900 text-gray-50 hover:bg-primary hover:-translate-y-2 hover:shadow-lg transition-all duration-300 rounded-lg font-semibold hover:cursor-pointer">
+                        <button onSubmit={signIn} className="px-6 py-2 bg-gray-900 text-gray-50 hover:bg-primary hover:-translate-y-2 hover:shadow-lg transition-all duration-300 rounded-lg font-semibold hover:cursor-pointer">
                             Sign in
                         </button>
                     </div>
                     <div className="flex my-6 justify-center align-end">
                         <p>Or if you dont have an account...</p>
-                        <button onClick={signUp} className="mx-2 px-6 py-2 bg-gray-900 text-gray-50 hover:bg-primary hover:-translate-y-2 hover:shadow-lg transition-all duration-300 rounded-lg font-semibold hover:cursor-pointer">
+                        <button onSubmit={signUp} className="mx-2 px-6 py-2 bg-gray-900 text-gray-50 hover:bg-primary hover:-translate-y-2 hover:shadow-lg transition-all duration-300 rounded-lg font-semibold hover:cursor-pointer">
                             Sign Up
                         </button>
                     </div>
