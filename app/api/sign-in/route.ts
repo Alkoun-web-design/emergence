@@ -1,4 +1,9 @@
-export async function POST(request: Request) {
+import { NextRequest, NextResponse } from "next/server";
+import { LoopsClient } from "loops";
+
+//POST https://app.loops.so/api/v1/transactional
+
+export async function POST(request: NextRequest) {
     const { body } = request;
     try {
         console.log(body)
@@ -9,9 +14,9 @@ export async function POST(request: Request) {
         });
         const data = JSON.stringify(response);
         console.log(data);
-        return new Response(data, {status: 200});
+        return new NextResponse(data, {status: 200});
     } catch (error) {
         const message = error instanceof Error ? error.message : 'Unexpected error'
-        return new Response(message, {status: 500})
+        return new NextResponse(message, {status: 500})
     }
 }
