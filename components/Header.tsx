@@ -55,19 +55,20 @@ export default function Header(){
             return data 
         } catch (error) {
             console.log(error)
-            return "There was a problem, We couldn't sign you in."
+            return "l:There was a problem, We couldn't sign you in."
         }
     }
 
     return (
         <header className="grid grid-cols-subgrid col-span-full place-content-center px-4 pt-4">
-            <span className="col-span-2">
+            <span className="col-span-5 lg:col-span-2">
                 <HeaderLogo />
             </span>
-            <nav className="inline-grid grid-cols-subgrid col-span-10 justify-content-around my-auto font-semibold align-middle">
-                <ul className="hidden lg:flex col-span-7 flex-row justify-around text-nowrap">
-                    <li className="mx-4 hover:bg-primary hover:text-gray-50 transition-all duration-300 px-4 py-2 rounded-md"><Link href="/">Home</Link></li>
-                    <li className="mx-4 hover:bg-primary hover:text-gray-50 transition-all duration-300 px-4 py-2 rounded-md" onMouseEnter={() => setIsHoverMenuVisible(true)} onMouseLeave={() => setIsHoverMenuVisible(false)}><Link href="/modules">Our Modules</Link><ArrowDown/>
+            <nav className="inline-grid grid-cols-subgrid col-span-7 lg:col-span-10 justify-content-around my-auto font-semibold align-middle">
+                <ul className="hidden lg:flex lg:col-span-7 flex-row justify-around text-nowrap">
+                    <li className="mx-2 hover:bg-primary hover:text-gray-50 transition-all duration-300 px-4 py-2 rounded-md"><Link href="/">Home</Link></li>
+                    <li className="mx-2 hover:bg-primary hover:text-gray-50 transition-all duration-300 px-4 py-2 rounded-md" onMouseEnter={() => setIsHoverMenuVisible(true)} onMouseLeave={() => setIsHoverMenuVisible(false)}>
+                        <Link href="/modules">Our Modules</Link><ArrowDown/>
                         <ul className={ isHoverMenuVisible ? `absolute z-10 w-fit h-fit border border-primary text-gray-900 rounded-lg top-16 bg-gray-50` : `hidden w-fit h-fit border border-primary text-gray-50`}>
                             <Link href="/modules"><li className="py-4 px-8 hover:bg-primary hover:text-gray-50">All Modules</li></Link>
                             <Link href="/modules"><li className="py-4 px-8 hover:bg-primary hover:text-gray-50">Category 1</li></Link>
@@ -83,28 +84,29 @@ export default function Header(){
                         <Link href="/contact-us">Contact Us</Link>
                     </li>
                 </ul>
-                <button popoverTarget="nav-menu" className="lg:hidden p-2 hover:cursor-pointer rounded-md w-fit h-fit hover:bg-primary hover:text-white transition-all duration-300">
+                <button popoverTarget="nav-menu" className="col-span-1 lg:hidden p-2 hover:cursor-pointer rounded-md w-fit h-fit hover:bg-primary hover:text-white transition-all duration-300">
                     <Menu />
                 </button>
-                <ul popover="auto" id="nav-menu" className="flex lg:hidden col-span-7 flex-col justify-around text-nowrap">
-                    <li className="mx-4 hover:bg-primary hover:text-gray-50 transition-all duration-300 px-4 py-2 rounded-md"><Link href="/">Home</Link></li>
-                    <li className="mx-4 hover:bg-primary hover:text-gray-50 transition-all duration-300 px-4 py-2 rounded-md" onMouseEnter={() => setIsHoverMenuVisible(true)} onMouseLeave={() => setIsHoverMenuVisible(false)}><Link href="/modules">Our Modules</Link><ArrowDown/>
+                <ul popover="auto" id="nav-menu" className="inset-0 rounded-md border border-primary h-fit w-fit overflow-visible lg:hidden flex-col justify-around text-nowrap">
+                    <li className="hover:bg-primary hover:text-gray-50 transition-all duration-300 px-4 py-2 rounded-md"><Link href="/">Home</Link></li>
+                    <li className="hover:bg-primary hover:text-gray-50 transition-all duration-300 px-4 py-2 rounded-md" onMouseEnter={() => setIsHoverMenuVisible(true)} onMouseLeave={() => setIsHoverMenuVisible(false)}>
+                        <Link href="/modules">Our Modules</Link><ArrowDown/>
                         <ul className={ isHoverMenuVisible ? `absolute z-10 w-fit h-fit border border-primary text-gray-900 rounded-lg top-16 bg-gray-50` : `hidden w-fit h-fit border border-primary text-gray-50`}>
-                            <Link href="/modules"><li className="py-4 px-8 hover:bg-primary hover:text-gray-50">All Modules</li></Link>
-                            <Link href="/modules"><li className="py-4 px-8 hover:bg-primary hover:text-gray-50">Category 1</li></Link>
-                            <Link href="/modules"><li className="py-4 px-8 hover:bg-primary hover:text-gray-50">Category 2</li></Link>
-                            <Link href="/modules"><li className="py-4 px-8 hover:bg-primary hover:text-gray-50">Category 3</li></Link>
-                            <Link href="/modules"><li className="py-4 px-8 hover:bg-primary hover:text-gray-50">Category 4</li></Link>
+                            <Link href="/modules"><li className="py-2 px-6 hover:bg-primary hover:text-gray-50">All Modules</li></Link>
+                            <Link href="/modules"><li className="py-2 px-6 hover:bg-primary hover:text-gray-50">Category 1</li></Link>
+                            <Link href="/modules"><li className="py-2 px-6 hover:bg-primary hover:text-gray-50">Category 2</li></Link>
+                            <Link href="/modules"><li className="py-2 px-6 hover:bg-primary hover:text-gray-50">Category 3</li></Link>
+                            <Link href="/modules"><li className="py-2 px-6 hover:bg-primary hover:text-gray-50">Category 4</li></Link>
                         </ul>
                     </li>
-                    <li className="mx-4 hover:bg-primary hover:text-gray-50 transition-all duration-300 px-4 py-2 rounded-md">
+                    <li className="hover:bg-primary hover:text-gray-50 transition-all duration-300 px-4 py-2 rounded-md">
                         <Link href="/about-emergence">About Emergence</Link>
                     </li>
-                    <li className="mx-4 hover:bg-primary hover:text-gray-50 transition-all duration-300 px-4 py-2 rounded-md">
+                    <li className="hover:bg-primary hover:text-gray-50 transition-all duration-300 px-4 py-2 rounded-md">
                         <Link href="/contact-us">Contact Us</Link>
                     </li>
                 </ul>
-                <ul className="col-span-1 flex flex-row justify-center text-nowrap" onClick={showSigInModal}>
+                <ul className="col-span-3 lg:col-span-1 flex flex-row justify-center text-nowrap" onClick={showSigInModal}>
                     <Show when="signed-out" >
                         <li className="mx-1 bg-gray-900 text-gray-50 hover:bg-primary hover:cursor-pointer hover:text-gray-50 transition-all duration-300 px-4 py-2 rounded-md">
                             <SignInButton>
@@ -120,7 +122,7 @@ export default function Header(){
                         </li>
                     </Show>
                 </ul>
-                <ul className="col-span-2 flex flex-row justify-around">
+                <ul className="col-span-3 lg:col-span-2 flex flex-row justify-around">
                     <li className="mx-1 hover:text-primary transition-all duration-300 px-2 py-2 rounded-md">
                         <Link href="/"><InstagramColored/></Link>
                     </li>
