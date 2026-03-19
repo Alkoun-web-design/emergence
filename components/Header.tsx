@@ -1,7 +1,7 @@
 'use client'
 import { Show, SignInButton, SignUpButton, UserButton } from '@clerk/nextjs'
 import Link from "next/link"
-import { ArrowDown, HeaderLogo, LinkedInBlue, InstagramColored } from "@/components/Icons"
+import { ArrowDown, HeaderLogo, LinkedInBlue, InstagramColored, Menu } from "@/components/Icons"
 import { useState, useRef } from "react"
 
 export default function Header(){
@@ -65,7 +65,28 @@ export default function Header(){
                 <HeaderLogo />
             </span>
             <nav className="inline-grid grid-cols-subgrid col-span-10 justify-content-around my-auto font-semibold align-middle">
-                <ul className="col-span-7 flex flex-row justify-around text-nowrap">
+                <ul className="hidden lg:flex col-span-7 flex-row justify-around text-nowrap">
+                    <li className="mx-4 hover:bg-primary hover:text-gray-50 transition-all duration-300 px-4 py-2 rounded-md"><Link href="/">Home</Link></li>
+                    <li className="mx-4 hover:bg-primary hover:text-gray-50 transition-all duration-300 px-4 py-2 rounded-md" onMouseEnter={() => setIsHoverMenuVisible(true)} onMouseLeave={() => setIsHoverMenuVisible(false)}><Link href="/modules">Our Modules</Link><ArrowDown/>
+                        <ul className={ isHoverMenuVisible ? `absolute z-10 w-fit h-fit border border-primary text-gray-900 rounded-lg top-16 bg-gray-50` : `hidden w-fit h-fit border border-primary text-gray-50`}>
+                            <Link href="/modules"><li className="py-4 px-8 hover:bg-primary hover:text-gray-50">All Modules</li></Link>
+                            <Link href="/modules"><li className="py-4 px-8 hover:bg-primary hover:text-gray-50">Category 1</li></Link>
+                            <Link href="/modules"><li className="py-4 px-8 hover:bg-primary hover:text-gray-50">Category 2</li></Link>
+                            <Link href="/modules"><li className="py-4 px-8 hover:bg-primary hover:text-gray-50">Category 3</li></Link>
+                            <Link href="/modules"><li className="py-4 px-8 hover:bg-primary hover:text-gray-50">Category 4</li></Link>
+                        </ul>
+                    </li>
+                    <li className="mx-4 hover:bg-primary hover:text-gray-50 transition-all duration-300 px-4 py-2 rounded-md">
+                        <Link href="/about-emergence">About Emergence</Link>
+                    </li>
+                    <li className="mx-4 hover:bg-primary hover:text-gray-50 transition-all duration-300 px-4 py-2 rounded-md">
+                        <Link href="/contact-us">Contact Us</Link>
+                    </li>
+                </ul>
+                <button popoverTarget="nav-menu" className="lg:hidden p-2 hover:cursor-pointer rounded-md w-fit h-fit hover:bg-primary hover:text-white transition-all duration-300">
+                    <Menu />
+                </button>
+                <ul popover="auto" id="nav-menu" className="flex lg:hidden col-span-7 flex-col justify-around text-nowrap">
                     <li className="mx-4 hover:bg-primary hover:text-gray-50 transition-all duration-300 px-4 py-2 rounded-md"><Link href="/">Home</Link></li>
                     <li className="mx-4 hover:bg-primary hover:text-gray-50 transition-all duration-300 px-4 py-2 rounded-md" onMouseEnter={() => setIsHoverMenuVisible(true)} onMouseLeave={() => setIsHoverMenuVisible(false)}><Link href="/modules">Our Modules</Link><ArrowDown/>
                         <ul className={ isHoverMenuVisible ? `absolute z-10 w-fit h-fit border border-primary text-gray-900 rounded-lg top-16 bg-gray-50` : `hidden w-fit h-fit border border-primary text-gray-50`}>
