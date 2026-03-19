@@ -121,9 +121,10 @@ export default function Header(){
                         </li>
                     </Show>
                     <Show when="signed-in" >
-                        <li className="mx-1 bg-gray-900 text-gray-50 hover:bg-primary hover:cursor-pointer hover:text-gray-50 transition-all duration-300 px-4 py-2 rounded-md">
+                        {/* <li className="mx-1 bg-gray-900 text-gray-50 hover:bg-primary hover:cursor-pointer hover:text-gray-50 transition-all duration-300  rounded-full"> */}
+                        <li className="h-fit w-fit mx-1 text-gray-50 ring-2 ring-primary hover:cursor-pointer hover:text-gray-50 transition-all duration-300 rounded-full">
                             <UserButton>
-                                <button>User</button>
+                                {/* <button>User</button> */}
                             </UserButton>
                         </li>
                     </Show>
