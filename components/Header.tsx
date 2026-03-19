@@ -15,9 +15,9 @@ export default function Header(){
         if (signInModalRef.current) signInModalRef.current.close();
     }
 
-    function showSigInModal(){
-        if (signInModalRef.current) signInModalRef.current?.showModal();
-    }
+    // function showSigInModal(){
+    //     if (signInModalRef.current) signInModalRef.current?.showModal();
+    // }
 
     async function signUp(e: React.MouseEvent<HTMLButtonElement>){
         e.preventDefault();
@@ -106,12 +106,18 @@ export default function Header(){
                         <Link href="/contact-us">Contact Us</Link>
                     </li>
                 </ul>
-                <ul className="col-span-3 lg:col-span-1 flex flex-row justify-center text-nowrap" onClick={showSigInModal}>
+                {/* <ul className="col-span-3 lg:col-span-1 flex flex-row justify-center text-nowrap" onClick={showSigInModal}> */}
+                <ul className="col-span-3 lg:col-span-1 flex flex-row justify-center text-nowrap">
                     <Show when="signed-out" >
                         <li className="mx-1 bg-gray-900 text-gray-50 hover:bg-primary hover:cursor-pointer hover:text-gray-50 transition-all duration-300 px-4 py-2 rounded-md">
                             <SignInButton>
                                 <button>Sign In</button>
                             </SignInButton>
+                        </li>
+                        <li className="mx-1 bg-gray-900 text-gray-50 hover:bg-primary hover:cursor-pointer hover:text-gray-50 transition-all duration-300 px-4 py-2 rounded-md">
+                            <SignUpButton>
+                                <button>Sign Up</button>
+                            </SignUpButton>
                         </li>
                     </Show>
                     <Show when="signed-in" >
