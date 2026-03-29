@@ -20,45 +20,45 @@ export default function Header(){
     //     if (signInModalRef.current) signInModalRef.current?.showModal();
     // }
 
-    async function signUp(e: React.MouseEvent<HTMLButtonElement>){
-        e.preventDefault();
-        try {
-            const response = await fetch('https://localhost:3000/api/sign-up', 
-                {
-                    method: 'POST',
-                    headers: {
-                        'Content-type': 'application/json',
-                    },
-                    body: emailAddress
-                },
-            )
-            const data = await response.json();
-            return data 
-        } catch (error) {
-            console.log(error)
-            return "There was a problem, We couldn't sign you in."
-        }
-    } 
+    // async function signUp(e: React.MouseEvent<HTMLButtonElement>){
+    //     e.preventDefault();
+    //     try {
+    //         const response = await fetch('https://localhost:3000/api/sign-up', 
+    //             {
+    //                 method: 'POST',
+    //                 headers: {
+    //                     'Content-type': 'application/json',
+    //                 },
+    //                 body: emailAddress
+    //             },
+    //         )
+    //         const data = await response.json();
+    //         return data 
+    //     } catch (error) {
+    //         console.log(error)
+    //         return "There was a problem, We couldn't sign you in."
+    //     }
+    // } 
 
-    async function signIn(e: React.MouseEvent<HTMLButtonElement>){
-        e.preventDefault();
-        try {
-            const response = await fetch('http://localhost:3000/api/sign-in', 
-                {
-                    method: 'POST',
-                    headers: {
-                        'Content-type': 'application/json',
-                    },
-                    body: emailAddress
-                },
-            )
-            const data = await response.json();
-            return data 
-        } catch (error) {
-            console.log(error)
-            return "l:There was a problem, We couldn't sign you in."
-        }
-    }
+    // async function signIn(e: React.MouseEvent<HTMLButtonElement>){
+    //     e.preventDefault();
+    //     try {
+    //         const response = await fetch('http://localhost:3000/api/sign-in', 
+    //             {
+    //                 method: 'POST',
+    //                 headers: {
+    //                     'Content-type': 'application/json',
+    //                 },
+    //                 body: emailAddress
+    //             },
+    //         )
+    //         const data = await response.json();
+    //         return data 
+    //     } catch (error) {
+    //         console.log(error)
+    //         return "l:There was a problem, We couldn't sign you in."
+    //     }
+    // }
 
     return (
         <header className="grid grid-cols-subgrid col-span-full place-content-center px-4 pt-4">
@@ -139,7 +139,8 @@ export default function Header(){
                         {/* <input ref={emailAddressRef} name="email" placeholder="Your email address" type="email" className="border border-primary rounded-md p-1 w-full"></input> */}
                     </div>
                     <div className="flex my-6 justify-center">
-                        <button onClick={signIn} className="px-6 py-2 bg-gray-900 text-gray-50 hover:bg-primary hover:-translate-y-2 hover:shadow-lg transition-all duration-300 rounded-lg font-semibold hover:cursor-pointer">
+                        {/* <button onClick={signIn} className="px-6 py-2 bg-gray-900 text-gray-50 hover:bg-primary hover:-translate-y-2 hover:shadow-lg transition-all duration-300 rounded-lg font-semibold hover:cursor-pointer"> */}
+                        <button className="px-6 py-2 bg-gray-900 text-gray-50 hover:bg-primary hover:-translate-y-2 hover:shadow-lg transition-all duration-300 rounded-lg font-semibold hover:cursor-pointer">
                             Sign in
                         </button>
                     </div>

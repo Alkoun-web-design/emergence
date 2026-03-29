@@ -1,11 +1,13 @@
 import type { Metadata } from "next";
 import { Geist } from "next/font/google";
-import { ClerkProvider } from '@clerk/nextjs'
+// import { ClerkProvider } from '@clerk/nextjs'
 import "./globals.css";
 // import Hero from "../components/Hero";
 // import BackgroundAnimation from "@/components/BackgroundAnimation";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import { auth } from "@/auth";
+import SignedInHeader from "@/components/SignedInHeader";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -18,26 +20,30 @@ export const metadata: Metadata = {
   description: "A platform for education",
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+
+  const session = await auth.api.getSession
+
   return (
     <html lang="en">
       <body
         className={`${geistSans.variable} font-light antialiased grid grid-cols-12 gap-6 col-span-full bg-gray-50 text-gray-900`}
       >
-        <ClerkProvider>
+        {/* <ClerkProvider> */}
         {/* <div className="fixed -z-20 top-0 left-0 h-screen w-full bg-linear-to-b from-gray-100 via-lime-100 to-lime-200">
           <BackgroundAnimation />
         </div> */}
         <main className="grid grid-cols-subgrid col-span-full backdrop-blur-xs">
-          <Header /> 
+          {!session ? <Header/> : <SignedInHeader />  }
+          {/* <Header />  */}
           {children}
           <Footer />
         </main>
-        </ClerkProvider>
+        {/* </ClerkProvider> */}
       </body>
     </html>
   );
