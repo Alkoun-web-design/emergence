@@ -3,6 +3,7 @@
 import Link from "next/link"
 import { ArrowDown, HeaderLogo, LinkedInBlue, InstagramColored, Menu } from "@/components/Icons"
 import { useState, useRef } from "react"
+import signOutAction from "@/app/actions/auth";
 
 export default function SignedInHeader(){
 
@@ -81,7 +82,11 @@ export default function SignedInHeader(){
                     </button>
                 </form>
                 <h2 className="text-xl text-center">User Profile</h2>
-                    
+                <form action={signOutAction}>
+                    <button type="submit" className="mx-1 bg-gray-900 text-gray-50 hover:bg-primary hover:cursor-pointer hover:text-gray-50 transition-all duration-300 px-4 py-2 rounded-md">
+                        Sign Out
+                    </button>
+                </form>
             </dialog>
         </header>
     )
