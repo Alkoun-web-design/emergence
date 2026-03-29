@@ -6,7 +6,7 @@ import "./globals.css";
 // import BackgroundAnimation from "@/components/BackgroundAnimation";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import { auth } from "@/auth";
+import { auth } from "@/lib/auth";
 import SignedInHeader from "@/components/SignedInHeader";
 
 const geistSans = Geist({
