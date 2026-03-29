@@ -14,6 +14,9 @@ importers:
       better-sqlite3:
         specifier: ^12.8.0
         version: 12.8.0
+      kysely:
+        specifier: ^0.28.14
+        version: 0.28.14
       loops:
         specifier: ^6.2.1
         version: 6.2.1
