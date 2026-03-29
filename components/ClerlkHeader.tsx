@@ -1,5 +1,5 @@
 'use client'
-import { Show, SignInButton, SignUpButton, UserButton } from '@clerk/nextjs'
+// import { Show, SignInButton, SignUpButton, UserButton } from '@clerk/nextjs'
 import Link from "next/link"
 import { ArrowDown, HeaderLogo, LinkedInBlue, InstagramColored, Menu } from "@/components/Icons"
 import { useState, useRef } from "react"
@@ -108,26 +108,26 @@ export default function Header(){
                 </ul>
                 {/* <ul className="col-span-3 lg:col-span-1 flex flex-row justify-center text-nowrap" onClick={showSigInModal}> */}
                 <ul className="col-span-3 lg:col-span-1 flex flex-row justify-center text-nowrap">
-                    <Show when="signed-out" >
+                    {/* <Show when="signed-out" > */}
                         <li className="mx-1 bg-gray-900 text-gray-50 hover:bg-primary hover:cursor-pointer hover:text-gray-50 transition-all duration-300 px-4 py-2 rounded-md">
-                            <SignInButton>
+                            {/* <SignInButton> */}
                                 <button>Sign In</button>
-                            </SignInButton>
+                            {/* </SignInButton> */}
                         </li>
                         <li className="mx-1 bg-gray-900 text-gray-50 hover:bg-primary hover:cursor-pointer hover:text-gray-50 transition-all duration-300 px-4 py-2 rounded-md">
-                            <SignUpButton>
+                            {/* <SignUpButton> */}
                                 <button>Sign Up</button>
-                            </SignUpButton>
+                            {/* </SignUpButton> */}
                         </li>
-                    </Show>
-                    <Show when="signed-in" >
+                    {/* </Show> */}
+                    {/* <Show when="signed-in" > */}
                         {/* <li className="mx-1 bg-gray-900 text-gray-50 hover:bg-primary hover:cursor-pointer hover:text-gray-50 transition-all duration-300  rounded-full"> */}
                         <li className="h-fit w-fit mx-1 text-gray-50 ring-2 ring-primary hover:cursor-pointer hover:text-gray-50 transition-all duration-300 rounded-full">
-                            <UserButton>
+                            {/* <UserButton> */}
                                 {/* <button>User</button> */}
-                            </UserButton>
+                            {/* </UserButton> */}
                         </li>
-                    </Show>
+                    {/* </Show> */}
                 </ul>
                 <ul className="col-span-3 lg:col-span-2 flex flex-row justify-around">
                     <li className="mx-1 hover:text-primary transition-all duration-300 px-2 py-2 rounded-md">
@@ -138,7 +138,7 @@ export default function Header(){
                     </li>
                 </ul>
             </nav>
-            <Show when="signed-out">
+            {/* <Show when="signed-out"> */}
             <dialog id="sigin-modal" ref={signInModalRef} className="backdrop-blur border border-primary rounded-lg py-8 px-12 w-fit h-hit shadow-xl shadow-gary-900/40 mx-auto mt-20">
                 <form method="dialog" className="mt-2 mb-8">
                     <button onClick={closeSigInModal} className="bg-gray-900 text-gray-50 rounded-md px-3 py-1 font-semibold hover:cursor-pointer hover:bg-primary transition-all duration-300" formMethod="dialog" value="close">
@@ -159,18 +159,18 @@ export default function Header(){
                     </div>
                     <div className="flex my-6 justify-center align-end">
                         <p>Or if you dont have an account...</p>
-                        <SignUpButton>
+                        {/* <SignUpButton> */}
                             <button onClick={signUp} className="mx-2 px-6 py-2 bg-gray-900 text-gray-50 hover:bg-primary hover:-translate-y-2 hover:shadow-lg transition-all duration-300 rounded-lg font-semibold hover:cursor-pointer">
                                 Sign Up
                             </button>
-                        </SignUpButton>
+                        {/* </SignUpButton> */}
                     </div>
                     <div className="flex my-6 justify-center">
                         <p></p>
                     </div>
                 </form>
             </dialog>
-            </Show>
+            {/* </Show> */}
         </header>
     )
 }
