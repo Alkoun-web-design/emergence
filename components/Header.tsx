@@ -11,9 +11,7 @@ export default function Header(){
     const [emailAddress, setEmailAddress] = useState<string>('');
     // const emailAddressRef = useRef<HTMLInputElement>(null);
     const signInModalRef = useRef<HTMLDialogElement>(null);
-    const signInTabRef = useRef<HTMLButtonElement>(null);
-    const signUpTabRef = useRef<HTMLButtonElement>(null);
-    const [showSignInTab, setShowSignInTab] = useState(true);
+    const [showModalTab, setShowModalTab] = useState('sign-in');
 
     function closeSigInModal(){
         if (signInModalRef.current) signInModalRef.current.close();
@@ -23,59 +21,13 @@ export default function Header(){
         if (signInModalRef.current) signInModalRef.current?.showModal();
     }
 
-    // function switchTab(e:HTMLButtonElement){
-    //     // if (e.textContent === 'Sign In') {
-
-    //     } else {
-
-    //     }
-    // }
-
-    function changeTab() {
-        setShowSignInTab(prev => !prev)
+    function showSignInTab() {
+        setShowModalTab('sign-in')
     }
 
-
-
-    // async function signUp(e: React.MouseEvent<HTMLButtonElement>){
-    //     e.preventDefault();
-    //     try {
-    //         const response = await fetch('https://localhost:3000/api/sign-up', 
-    //             {
-    //                 method: 'POST',
-    //                 headers: {
-    //                     'Content-type': 'application/json',
-    //                 },
-    //                 body: emailAddress
-    //             },
-    //         )
-    //         const data = await response.json();
-    //         return data 
-    //     } catch (error) {
-    //         console.log(error)
-    //         return "There was a problem, We couldn't sign you in."
-    //     }
-    // } 
-
-    // async function signIn(e: React.MouseEvent<HTMLButtonElement>){
-    //     e.preventDefault();
-    //     try {
-    //         const response = await fetch('http://localhost:3000/api/sign-in', 
-    //             {
-    //                 method: 'POST',
-    //                 headers: {
-    //                     'Content-type': 'application/json',
-    //                 },
-    //                 body: emailAddress
-    //             },
-    //         )
-    //         const data = await response.json();
-    //         return data 
-    //     } catch (error) {
-    //         console.log(error)
-    //         return "l:There was a problem, We couldn't sign you in."
-    //     }
-    // }
+    function showSignOutTab() {
+        setShowModalTab('sign-out')
+    }
 
     return (
         <header className="grid grid-cols-subgrid col-span-full place-content-center px-4 pt-4">
@@ -142,76 +94,69 @@ export default function Header(){
                     </li>
                 </ul>
             </nav>
-            <dialog id="sigin-modal" ref={signInModalRef} className="backdrop-blur border border-primary rounded-lg py-8 px-12 w-fit h-hit shadow-xl shadow-gary-900/40 mx-auto mt-20">
-                <form method="dialog" className="mt-2 mb-8">
+            <dialog id="sigin-modal" ref={signInModalRef} className="backdrop-blur border border-primary rounded-lg py-12 px-12 w-fit h-hit shadow-xl shadow-gary-900/40 mx-auto mt-20">
+                <form method="dialog" className="mb-8">
                     <button onClick={closeSigInModal} className="bg-gray-900 text-gray-50 rounded-md px-3 py-1 font-semibold hover:cursor-pointer hover:bg-primary transition-all duration-300" formMethod="dialog" value="close">
                         X
                     </button>
                 </form>
                 <div className="flex flex-row">
-                    <button ref={signInTabRef} onClick={changeTab} className="py-2 px-4 hover:bg-primary transition-all duration-300 hover:text-gray-100 hover:cursor-pointer">Sign In</button>
-                    <button ref={signUpTabRef} onClick={changeTab} className="py-2 px-4 hover:bg-primary transition-all duration-300 hover:text-gray-100 hover:cursor-pointer">Sign Up</button>
+                    <button onClick={showSignInTab} className={`rounded-t-lg font-medium py-2 px-4 hover:bg-primary transition-all duration-300 hover:text-gray-100 hover:cursor-pointer ${showModalTab === 'sign-in' ? 'bg-primary text-gray-100' : 'text-gray-900 bg-gray-200'}`}>Sign In</button>
+                    <button onClick={showSignOutTab} className={`rounded-t-lg font-medium py-2 px-4 hover:bg-primary transition-all duration-300 hover:text-gray-100 hover:cursor-pointer ${showModalTab === 'sign-out' ? 'bg-primary text-gray-100' : 'text-gray-900 bg-gray-200'}`}>Sign Up</button>
                 </div>
-                {showSignInTab ? 
-                <div className="border border-primary p-8 rounded-lg">
-                    {/* <details open name="sign-in-sign-up" className="transition-all duration-300"> */}
-                        {/* <summary>Sign In</summary> */}
-                        <h2 className="mt-8 text-xl text-center">Sign In with your Email</h2>
-                        <form action={signInAction} className="">
-                            <div className="my-6">
-                                <label htmlFor="email" className="mr-2">Email</label>
-                                <input name="email" type="email" placeholder="Your email address" className="border border-primary rounded-md p-1 w-full" value={emailAddress} onChange={(e) => setEmailAddress(e.target.value) }></input>
-                                {/* <input ref={emailAddressRef} name="email" placeholder="Your email address" type="email" className="border border-primary rounded-md p-1 w-full"></input> */}
-                            </div>
-                            <div className="my-6">
-                                <label htmlFor="password" className="mr-2">Email</label>
-                                <input name="password" type="password" placeholder="Your password" className="border border-primary rounded-md p-1 w-full" value={emailAddress} onChange={(e) => setEmailAddress(e.target.value) }></input>
-                            </div>
-                            <div className="flex my-6 justify-center">
-                                {/* <button onClick={signIn} className="px-6 py-2 bg-gray-900 text-gray-50 hover:bg-primary hover:-translate-y-2 hover:shadow-lg transition-all duration-300 rounded-lg font-semibold hover:cursor-pointer"> */}
-                                <button className="px-6 py-2 bg-gray-900 text-gray-50 hover:bg-primary hover:-translate-y-2 hover:shadow-lg transition-all duration-300 rounded-lg font-semibold hover:cursor-pointer">
-                                    Sign in
-                                </button>
-                            </div>
-                            <div className="flex my-6 justify-center align-end">
-                                <p>Or if you dont have an account, sign up.</p>
-                            </div>
-                            <div className="flex my-6 justify-center">
-                                <p></p>
-                            </div>
-                        </form>
-                    {/* </details> */}
-                    {/* <details name="sign-in-sign-up" className="transition-all duration-300"> */}
-                        {/* <summary>Sign Up</summary> */}
-                    </div>
-                    :
-                    <div className="border border-primary p-8 rounded-lg">
-                        <h2 className="mt-8 text-xl text-center">Sign Up</h2>
-                        <form action={signUpAction} className="">
-                            <div className="my-6">
-                                <label htmlFor="name" className="mr-2">Email</label>
-                                <input name="name" type="text" placeholder="Your full name" className="border border-primary rounded-md p-1 w-full" value={emailAddress} onChange={(e) => setEmailAddress(e.target.value) }></input>
-                            </div>
-                            <div className="my-6">
-                                <label htmlFor="email" className="mr-2">Email</label>
-                                <input name="email" type="email" placeholder="Your email address" className="border border-primary rounded-md p-1 w-full" value={emailAddress} onChange={(e) => setEmailAddress(e.target.value) }></input>
-                            </div>
-                            <div className="my-6">
-                                <label htmlFor="password" className="mr-2">Email</label>
-                                <input name="password" type="password" placeholder="Your password" className="border border-primary rounded-md p-1 w-full" value={emailAddress} onChange={(e) => setEmailAddress(e.target.value) }></input>
-                            </div>
-                            <div className="flex my-6 justify-center">
-                                {/* <button onClick={signIn} className="px-6 py-2 bg-gray-900 text-gray-50 hover:bg-primary hover:-translate-y-2 hover:shadow-lg transition-all duration-300 rounded-lg font-semibold hover:cursor-pointer"> */}
-                                <button className="px-6 py-2 bg-gray-900 text-gray-50 hover:bg-primary hover:-translate-y-2 hover:shadow-lg transition-all duration-300 rounded-lg font-semibold hover:cursor-pointer">
-                                    Sign up
-                                </button>
-                            </div>
-
-                            <div className="flex my-6 justify-center">
-                                <p></p>
-                            </div>
-                        </form>
-                    {/* </details> */}
+                {showModalTab === 'sign-in' ? 
+                <div className="border border-primary px-8 rounded-b-lg rounded-tr-lg max-w-86 md:min-w-100">
+                    <h2 className="mt-8 text-xl text-center">Sign In with your Email</h2>
+                    <form action={signInAction} className="">
+                        <div className="my-6">
+                            <label htmlFor="email" className="mr-2">Email</label>
+                            <input name="email" type="email" placeholder="Your email address" className="border border-primary rounded-md p-1 w-full" value={emailAddress} onChange={(e) => setEmailAddress(e.target.value) }></input>
+                            {/* <input ref={emailAddressRef} name="email" placeholder="Your email address" type="email" className="border border-primary rounded-md p-1 w-full"></input> */}
+                        </div>
+                        <div className="my-6">
+                            <label htmlFor="password" className="mr-2">Password</label>
+                            <input name="password" type="password" placeholder="Your password" className="border border-primary rounded-md p-1 w-full" value={emailAddress} onChange={(e) => setEmailAddress(e.target.value) }></input>
+                        </div>
+                        <div className="flex my-10 justify-center">
+                            {/* <button onClick={signIn} className="px-6 py-2 bg-gray-900 text-gray-50 hover:bg-primary hover:-translate-y-2 hover:shadow-lg transition-all duration-300 rounded-lg font-semibold hover:cursor-pointer"> */}
+                            <button className="px-6 py-2 bg-gray-900 text-gray-50 hover:bg-primary hover:-translate-y-2 hover:shadow-lg transition-all duration-300 rounded-lg font-semibold hover:cursor-pointer">
+                                Sign in
+                            </button>
+                        </div>
+                        <div className="flex mt-6 mb-2 justify-start align-end">
+                            <p>If you dont have an account yet, sign up first.</p>
+                        </div>
+                        <div className="flex mt-2 mb-6 justify-start align-start">
+                            <p>All fields are required to be filled.</p>
+                        </div>
+                    </form>
+                </div>
+                :
+                <div className="border border-primary px-8 roundedt-b-lg rounded-tr-lg max-w-86 md:min-w-100">
+                    <h2 className="mt-8 text-xl text-center">Sign Up</h2>
+                    <form action={signUpAction} className="">
+                        <div className="my-6">
+                            <label htmlFor="name" className="mr-2">Full Name</label>
+                            <input name="name" type="text" placeholder="Your full name" className="border border-primary rounded-md p-1 w-full" value={emailAddress} onChange={(e) => setEmailAddress(e.target.value) }></input>
+                        </div>
+                        <div className="my-6">
+                            <label htmlFor="email" className="mr-2">Email</label>
+                            <input name="email" type="email" placeholder="Your email address" className="border border-primary rounded-md p-1 w-full" value={emailAddress} onChange={(e) => setEmailAddress(e.target.value) }></input>
+                        </div>
+                        <div className="my-6">
+                            <label htmlFor="password" className="mr-2">Password</label>
+                            <input name="password" type="password" placeholder="Your password" className="border border-primary rounded-md p-1 w-full" value={emailAddress} onChange={(e) => setEmailAddress(e.target.value) }></input>
+                        </div>
+                        <div className="flex my-10 justify-center">
+                            {/* <button onClick={signIn} className="px-6 py-2 bg-gray-900 text-gray-50 hover:bg-primary hover:-translate-y-2 hover:shadow-lg transition-all duration-300 rounded-lg font-semibold hover:cursor-pointer"> */}
+                            <button className="px-6 py-2 bg-gray-900 text-gray-50 hover:bg-primary hover:-translate-y-2 hover:shadow-lg transition-all duration-300 rounded-lg font-semibold hover:cursor-pointer">
+                                Sign up
+                            </button>
+                        </div>
+                        <div className="flex my-6 justify-start">
+                            <p>All fields are required to be filled.</p>
+                        </div>
+                    </form>
                 </div>
             }
             </dialog>
