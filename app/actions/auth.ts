@@ -2,7 +2,7 @@
 
  import { redirect } from "next/navigation"
  import { headers } from "next/headers";
- import { auth } from "@/lib/auth"
+ import { auth } from "@/auth"
 
  export async  function signUpAction (formData: FormData) {
     const email = formData.get("email") as  string;

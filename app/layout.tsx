@@ -2,11 +2,11 @@ import type { Metadata } from "next";
 import { Geist } from "next/font/google";
 // import { ClerkProvider } from '@clerk/nextjs'
 import "./globals.css";
-// import Hero from "../components/Hero";
+import {headers} from 'next/headers';
 // import BackgroundAnimation from "@/components/BackgroundAnimation";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import { auth } from "@/lib/auth";
+import { auth } from "@/auth";
 import SignedInHeader from "@/components/SignedInHeader";
 
 const geistSans = Geist({
@@ -26,7 +26,9 @@ export default async function RootLayout({
   children: React.ReactNode;
 }>) {
 
-  const session = await auth.api.getSession
+  const session = await auth.api.getSession({
+    headers: await headers()
+  })
 
   return (
     <html lang="en">
@@ -38,7 +40,7 @@ export default async function RootLayout({
           <BackgroundAnimation />
         </div> */}
         <main className="grid grid-cols-subgrid col-span-full backdrop-blur-xs">
-          {session ? <Header/> : <SignedInHeader />  }
+          {!session ? <Header/> : <SignedInHeader />  }
           {/* <Header />  */}
           {children}
           <Footer />
