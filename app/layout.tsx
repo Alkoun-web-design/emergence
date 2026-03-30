@@ -38,7 +38,7 @@ export default async function RootLayout({
           <BackgroundAnimation />
         </div> */}
         <main className="grid grid-cols-subgrid col-span-full backdrop-blur-xs">
-          {!session ? <Header/> : <SignedInHeader />  }
+          {session ? <Header/> : <SignedInHeader />  }
           {/* <Header />  */}
           {children}
           <Footer />

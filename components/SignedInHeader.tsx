@@ -63,10 +63,10 @@ export default function SignedInHeader(){
                 </ul>
                 <ul className="col-span-3 lg:col-span-1 flex flex-row justify-center text-nowrap">
                     <li className="mx-1 bg-gray-900 text-gray-50 hover:bg-primary hover:cursor-pointer hover:text-gray-50 transition-all duration-300 px-4 py-2 rounded-md">
-                        <button>User Profile</button>
+                        <button>User</button>
                     </li>
                 </ul>
-                <ul className="col-span-3 lg:col-span-2 flex flex-row justify-around">
+                <ul className="col-span-2 lg:col-span-2 flex flex-row justify-around">
                     <li className="mx-1 hover:text-primary transition-all duration-300 px-2 py-2 rounded-md">
                         <Link href="/"><InstagramColored/></Link>
                     </li>

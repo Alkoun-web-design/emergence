@@ -3,7 +3,7 @@
 import Link from "next/link"
 import { ArrowDown, HeaderLogo, LinkedInBlue, InstagramColored, Menu } from "@/components/Icons"
 import { useState, useRef } from "react"
-import { signInAction } from "@/app/actions/auth";
+import { signInAction, signUpAction } from "@/app/actions/auth";
 
 export default function Header(){
 
@@ -11,14 +11,31 @@ export default function Header(){
     const [emailAddress, setEmailAddress] = useState<string>('');
     // const emailAddressRef = useRef<HTMLInputElement>(null);
     const signInModalRef = useRef<HTMLDialogElement>(null);
+    const signInTabRef = useRef<HTMLButtonElement>(null);
+    const signUpTabRef = useRef<HTMLButtonElement>(null);
+    const [showSignInTab, setShowSignInTab] = useState(true);
 
     function closeSigInModal(){
         if (signInModalRef.current) signInModalRef.current.close();
     }
 
-    // function showSigInModal(){
-    //     if (signInModalRef.current) signInModalRef.current?.showModal();
+    function showSigInModal(){
+        if (signInModalRef.current) signInModalRef.current?.showModal();
+    }
+
+    // function switchTab(e:HTMLButtonElement){
+    //     // if (e.textContent === 'Sign In') {
+
+    //     } else {
+
+    //     }
     // }
+
+    function changeTab() {
+        setShowSignInTab(prev => !prev)
+    }
+
+
 
     // async function signUp(e: React.MouseEvent<HTMLButtonElement>){
     //     e.preventDefault();
@@ -109,14 +126,14 @@ export default function Header(){
                 </ul>
                 {/* <ul className="col-span-3 lg:col-span-1 flex flex-row justify-center text-nowrap" onClick={showSigInModal}> */}
                 <ul className="col-span-3 lg:col-span-1 flex flex-row justify-center text-nowrap">
-                    <li className="mx-1 bg-gray-900 text-gray-50 hover:bg-primary hover:cursor-pointer hover:text-gray-50 transition-all duration-300 px-4 py-2 rounded-md">
+                    <li onClick={showSigInModal} className="mx-1 bg-gray-900 text-gray-50 hover:bg-primary hover:cursor-pointer hover:text-gray-50 transition-all duration-300 px-4 py-2 rounded-md">
                         <button>Sign In</button>
                     </li>
-                    <li className="mx-1 bg-gray-900 text-gray-50 hover:bg-primary hover:cursor-pointer hover:text-gray-50 transition-all duration-300 px-4 py-2 rounded-md">
+                    {/* <li className="mx-1 bg-gray-900 text-gray-50 hover:bg-primary hover:cursor-pointer hover:text-gray-50 transition-all duration-300 px-4 py-2 rounded-md">
                         <button>Sign Up</button>
-                    </li>
+                    </li> */}
                 </ul>
-                <ul className="col-span-3 lg:col-span-2 flex flex-row justify-around">
+                <ul className="col-span-2 lg:col-span-1 flex flex-row justify-around">
                     <li className="mx-1 hover:text-primary transition-all duration-300 px-2 py-2 rounded-md">
                         <Link href="/"><InstagramColored/></Link>
                     </li>
@@ -131,32 +148,72 @@ export default function Header(){
                         X
                     </button>
                 </form>
-                <h2 className="text-xl text-center">Sign In with your Email</h2>
-                <form action={signInAction} className="">
-                    <div className="my-6">
-                        <label htmlFor="email" className="mr-2">Email</label>
-                        <input name="email" type="email" placeholder="Your email address" className="border border-primary rounded-md p-1 w-full" value={emailAddress} onChange={(e) => setEmailAddress(e.target.value) }></input>
-                        {/* <input ref={emailAddressRef} name="email" placeholder="Your email address" type="email" className="border border-primary rounded-md p-1 w-full"></input> */}
+                <div className="flex flex-row">
+                    <button ref={signInTabRef} onClick={changeTab} className="py-2 px-4 hover:bg-primary transition-all duration-300 hover:text-gray-100 hover:cursor-pointer">Sign In</button>
+                    <button ref={signUpTabRef} onClick={changeTab} className="py-2 px-4 hover:bg-primary transition-all duration-300 hover:text-gray-100 hover:cursor-pointer">Sign Up</button>
+                </div>
+                {showSignInTab ? 
+                <div className="border border-primary p-8 rounded-lg">
+                    {/* <details open name="sign-in-sign-up" className="transition-all duration-300"> */}
+                        {/* <summary>Sign In</summary> */}
+                        <h2 className="mt-8 text-xl text-center">Sign In with your Email</h2>
+                        <form action={signInAction} className="">
+                            <div className="my-6">
+                                <label htmlFor="email" className="mr-2">Email</label>
+                                <input name="email" type="email" placeholder="Your email address" className="border border-primary rounded-md p-1 w-full" value={emailAddress} onChange={(e) => setEmailAddress(e.target.value) }></input>
+                                {/* <input ref={emailAddressRef} name="email" placeholder="Your email address" type="email" className="border border-primary rounded-md p-1 w-full"></input> */}
+                            </div>
+                            <div className="my-6">
+                                <label htmlFor="password" className="mr-2">Email</label>
+                                <input name="password" type="password" placeholder="Your password" className="border border-primary rounded-md p-1 w-full" value={emailAddress} onChange={(e) => setEmailAddress(e.target.value) }></input>
+                            </div>
+                            <div className="flex my-6 justify-center">
+                                {/* <button onClick={signIn} className="px-6 py-2 bg-gray-900 text-gray-50 hover:bg-primary hover:-translate-y-2 hover:shadow-lg transition-all duration-300 rounded-lg font-semibold hover:cursor-pointer"> */}
+                                <button className="px-6 py-2 bg-gray-900 text-gray-50 hover:bg-primary hover:-translate-y-2 hover:shadow-lg transition-all duration-300 rounded-lg font-semibold hover:cursor-pointer">
+                                    Sign in
+                                </button>
+                            </div>
+                            <div className="flex my-6 justify-center align-end">
+                                <p>Or if you dont have an account, sign up.</p>
+                            </div>
+                            <div className="flex my-6 justify-center">
+                                <p></p>
+                            </div>
+                        </form>
+                    {/* </details> */}
+                    {/* <details name="sign-in-sign-up" className="transition-all duration-300"> */}
+                        {/* <summary>Sign Up</summary> */}
                     </div>
-                    <div className="flex my-6 justify-center">
-                        {/* <button onClick={signIn} className="px-6 py-2 bg-gray-900 text-gray-50 hover:bg-primary hover:-translate-y-2 hover:shadow-lg transition-all duration-300 rounded-lg font-semibold hover:cursor-pointer"> */}
-                        <button className="px-6 py-2 bg-gray-900 text-gray-50 hover:bg-primary hover:-translate-y-2 hover:shadow-lg transition-all duration-300 rounded-lg font-semibold hover:cursor-pointer">
-                            Sign in
-                        </button>
-                    </div>
-                    <div className="flex my-6 justify-center align-end">
-                        <p>Or if you dont have an account...</p>
-                        {/* <button onClick={signUp} className="mx-2 px-6 py-2 bg-gray-900 text-gray-50 hover:bg-primary hover:-translate-y-2 hover:shadow-lg transition-all duration-300 rounded-lg font-semibold hover:cursor-pointer">
-                            Sign Up
-                        </button> */}
-                        <button type="submit" className="mx-2 px-6 py-2 bg-gray-900 text-gray-50 hover:bg-primary hover:-translate-y-2 hover:shadow-lg transition-all duration-300 rounded-lg font-semibold hover:cursor-pointer">
-                            Sign Up
-                        </button>
-                    </div>
-                    <div className="flex my-6 justify-center">
-                        <p></p>
-                    </div>
-                </form>
+                    :
+                    <div className="border border-primary p-8 rounded-lg">
+                        <h2 className="mt-8 text-xl text-center">Sign Up</h2>
+                        <form action={signUpAction} className="">
+                            <div className="my-6">
+                                <label htmlFor="name" className="mr-2">Email</label>
+                                <input name="name" type="text" placeholder="Your full name" className="border border-primary rounded-md p-1 w-full" value={emailAddress} onChange={(e) => setEmailAddress(e.target.value) }></input>
+                            </div>
+                            <div className="my-6">
+                                <label htmlFor="email" className="mr-2">Email</label>
+                                <input name="email" type="email" placeholder="Your email address" className="border border-primary rounded-md p-1 w-full" value={emailAddress} onChange={(e) => setEmailAddress(e.target.value) }></input>
+                            </div>
+                            <div className="my-6">
+                                <label htmlFor="password" className="mr-2">Email</label>
+                                <input name="password" type="password" placeholder="Your password" className="border border-primary rounded-md p-1 w-full" value={emailAddress} onChange={(e) => setEmailAddress(e.target.value) }></input>
+                            </div>
+                            <div className="flex my-6 justify-center">
+                                {/* <button onClick={signIn} className="px-6 py-2 bg-gray-900 text-gray-50 hover:bg-primary hover:-translate-y-2 hover:shadow-lg transition-all duration-300 rounded-lg font-semibold hover:cursor-pointer"> */}
+                                <button className="px-6 py-2 bg-gray-900 text-gray-50 hover:bg-primary hover:-translate-y-2 hover:shadow-lg transition-all duration-300 rounded-lg font-semibold hover:cursor-pointer">
+                                    Sign up
+                                </button>
+                            </div>
+
+                            <div className="flex my-6 justify-center">
+                                <p></p>
+                            </div>
+                        </form>
+                    {/* </details> */}
+                </div>
+            }
             </dialog>
         </header>
     )
