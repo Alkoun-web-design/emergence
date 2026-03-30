@@ -5,8 +5,10 @@ import { nextCookies } from 'better-auth/next-js'
 // import { magicLink } from "better-auth/plugins";  
 import Database from "better-sqlite3"; 
 
+const sqliteDB = new Database("../emergence.db");
+
 export const auth = betterAuth({
-  database: new Database("../emergence.db"),
+  database: sqliteDB,
   emailAndPassword: { 
     enabled: true, 
   }, 
