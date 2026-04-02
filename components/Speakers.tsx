@@ -4,10 +4,11 @@ export default function Speakers({name, image, description} : {name:string, imag
            <div className="border-b-2 border-transparent border-b-gray-300 flex flex-row">
               <div className="justify-start">
                  <img loading="lazy"  className="ring-2 w-20 h-20 md:w-28 md:h-28 rounded-full" src={image} alt={name} />
-                 <h3 className="my-1 text-primary text-lg lg:text-2xl">{name}</h3>
+                 {/* <h3 className="my-1 text-primary text-lg lg:text-2xl">{name}</h3> */}
+                 <h3 className="font-semiboldmy-1 text-gray-900 text-lg lg:text-2xl">{name}</h3>
               </div>
               <div className="my-auto ml-auto">
-                 <button className="text-nowrap text-sm md:text-base px-4 py-2 transition-all border border-primary hover:bg-gray-50 hover:text-primary bg-primary text-gray-50 rounded-md"></button> 
+                 <button className="hover:cursor-pointer text-nowrap text-sm md:text-base px-4 py-2 transition-all border border-primary hover:bg-gray-50 hover:text-primary bg-primary text-gray-50 rounded-md"></button> 
               </div>
            </div>
            <div className="text-sm md:text-base">

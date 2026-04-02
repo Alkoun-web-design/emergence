@@ -142,7 +142,23 @@ export const speakers: Speaker[] = [
 export const modules: Module[] = [
     {
         name: '10-Month Therapeutic Discussion Series on Relational and Integrative Psychotherapy in Pakistan',
-        description: "This 10-month Therapeutic  Discussion Series offers a reflective space for psychotherapists, counsellors, and trainees in Pakistan to engage with their work through a relational and integrative lens. The series responds to the relative isolation many practitioners experience and the limited opportunities for sustained, thoughtful dialogue across levels of experience and diverse therapeutic orientations.",
+        description: `
+            <h2 className="text-2xl lg:text-3xl border-b-2 border-transparent border-b-gray-300">Overview</h2>
+            <p className="my-4 text-gray-600 text-sm md:text-base">This 10-month Therapeutic  Discussion Series offers a reflective space for psychotherapists, counsellors, and trainees in Pakistan to engage with their work through a relational and integrative lens. The series responds to the relative isolation many practitioners experience and the limited opportunities for sustained, thoughtful dialogue across levels of experience and diverse therapeutic orientations.</p>
+            <p className="my-4 text-gray-600 text-sm md:text-base">Rather than promoting a single “correct” model of psychotherapy, the series creates space for complexity, uncertainty, and ambivalence - central realities of therapeutic practice that are often marginalised in skills-based or technique-driven training.</p>
+            <h2 className="text-2xl lg:text-3xl border-b-2 border-transparent border-b-gray-300">Orientation and Focus</h2>
+            <p className="my-4 text-gray-600 text-sm md:text-base">Grounded in contemporary relational and integrative psychotherapy, the series understands therapy as a co-created process shaped by conscious and unconscious, emotional, embodied, and cultural dynamics. Productive, helpful and precise understanding of the therapeutic process is seen to emerge through deep engagement in relationship rather than through theories or prescription.</p>
+            <p className="my-4 text-gray-600 text-sm md:text-base">A central focus is an extended notion of parallel process—the unconscious repetition of relational patterns across therapy and supervision - which incorporates and depends upon attention to transference, countertransference, and enactments. Although painfully problematic for client and therapist, these largely unconscious processes are understood as vital sources of relational information about the roots of the woundings which bring the client to therapy in the first place. We will use the group context as an additional matrix to both manifest, reflect upon and contain parallel processes.</p>
+            <h2 className="text-2xl lg:text-3xl border-b-2 border-transparent border-b-gray-300">Guest Supervisors</h2>
+            <p className="my-4 text-gray-600 text-sm md:text-base">The series brings together experienced relational, psychodynamic, and integrative psychotherapists who have worked as trainers and as supervisors with Pakistani clients and practitioners. While united by a relational ethos, each supervisor brings a distinct therapeutic sensibility shaped by their training, cultural context, and professional experience.</p>
+            <p className="my-4 text-gray-600 text-sm md:text-base">This diversity reflects the realities of therapeutic practice, where no single framework can fully capture the complexity of human relationships.</p>
+            <h2 className="text-2xl lg:text-3xl border-b-2 border-transparent border-b-gray-300">Who Is This Series For?</h2>
+            <p className="my-4 text-gray-600 text-sm md:text-base">Psychotherapists and counsellors at all stages of practice</p>
+            <p className="my-4 text-gray-600 text-sm md:text-base">Trainees seeking depth beyond technique</p>
+            <p className="my-4 text-gray-600 text-sm md:text-base">Practitioners interested in relational, integrative, and psychodynamic thinking</p>
+            <p className="my-4 text-gray-600 text-sm md:text-base">Call for Participants</p>
+            <p className="my-4 text-gray-600 text-sm md:text-base">This series invites practitioners who are willing to engage thoughtfully with their therapeutic work, including moments of uncertainty, stuckness, and emotional complexity. Participants are encouraged to bring curiosity, openness, and a commitment to reflective dialogue.</p>
+            <p className="my-4 text-gray-600 text-sm md:text-base">The series offers an opportunity to develop a grounded, relational therapeutic identity within a supportive and intellectually rigorous community.</p>`,
         image: '/water-ripples-4.webp',
         // image: '/images/workshops/1.jpg',
         price: '20.00',
@@ -156,7 +172,23 @@ export const modules: Module[] = [
     },
     {
         name: 'Dancing with the devil: Accepting our inner-demons',
-        description: "This 10-month Therapeutic  Discussion Series offers a reflective space for psychotherapists, counsellors, and trainees in Pakistan to engage with their work through a relational and integrative lens. The series responds to the relative isolation many practitioners experience and the limited opportunities for sustained, thoughtful dialogue across levels of experience and diverse therapeutic orientations.",        
+        description: `
+            <h2 className="text-2xl lg:text-3xl border-b-2 border-transparent border-b-gray-300">Overview</h2>
+            <p className="my-4 text-gray-600 text-sm md:text-base">This 10-month Therapeutic  Discussion Series offers a reflective space for psychotherapists, counsellors, and trainees in Pakistan to engage with their work through a relational and integrative lens. The series responds to the relative isolation many practitioners experience and the limited opportunities for sustained, thoughtful dialogue across levels of experience and diverse therapeutic orientations.</p>
+            <p className="my-4 text-gray-600 text-sm md:text-base">Rather than promoting a single “correct” model of psychotherapy, the series creates space for complexity, uncertainty, and ambivalence - central realities of therapeutic practice that are often marginalised in skills-based or technique-driven training.</p>
+            <h2 className="text-2xl lg:text-3xl border-b-2 border-transparent border-b-gray-300">Orientation and Focus</h2>
+            <p className="my-4 text-gray-600 text-sm md:text-base">Grounded in contemporary relational and integrative psychotherapy, the series understands therapy as a co-created process shaped by conscious and unconscious, emotional, embodied, and cultural dynamics. Productive, helpful and precise understanding of the therapeutic process is seen to emerge through deep engagement in relationship rather than through theories or prescription.</p>
+            <p className="my-4 text-gray-600 text-sm md:text-base">A central focus is an extended notion of parallel process—the unconscious repetition of relational patterns across therapy and supervision - which incorporates and depends upon attention to transference, countertransference, and enactments. Although painfully problematic for client and therapist, these largely unconscious processes are understood as vital sources of relational information about the roots of the woundings which bring the client to therapy in the first place. We will use the group context as an additional matrix to both manifest, reflect upon and contain parallel processes.</p>
+            <h2 className="text-2xl lg:text-3xl border-b-2 border-transparent border-b-gray-300">Guest Supervisors</h2>
+            <p className="my-4 text-gray-600 text-sm md:text-base">The series brings together experienced relational, psychodynamic, and integrative psychotherapists who have worked as trainers and as supervisors with Pakistani clients and practitioners. While united by a relational ethos, each supervisor brings a distinct therapeutic sensibility shaped by their training, cultural context, and professional experience.</p>
+            <p className="my-4 text-gray-600 text-sm md:text-base">This diversity reflects the realities of therapeutic practice, where no single framework can fully capture the complexity of human relationships.</p>
+            <h2 className="text-2xl lg:text-3xl border-b-2 border-transparent border-b-gray-300">Who Is This Series For?</h2>
+            <p className="my-4 text-gray-600 text-sm md:text-base">Psychotherapists and counsellors at all stages of practice</p>
+            <p className="my-4 text-gray-600 text-sm md:text-base">Trainees seeking depth beyond technique</p>
+            <p className="my-4 text-gray-600 text-sm md:text-base">Practitioners interested in relational, integrative, and psychodynamic thinking</p>
+            <p className="my-4 text-gray-600 text-sm md:text-base">Call for Participants</p>
+            <p className="my-4 text-gray-600 text-sm md:text-base">This series invites practitioners who are willing to engage thoughtfully with their therapeutic work, including moments of uncertainty, stuckness, and emotional complexity. Participants are encouraged to bring curiosity, openness, and a commitment to reflective dialogue.</p>
+            <p className="my-4 text-gray-600 text-sm md:text-base">The series offers an opportunity to develop a grounded, relational therapeutic identity within a supportive and intellectually rigorous community.</p>`,
         image: '/images/workshops/2.jpg',
         price: '20.00',
         discountPrice: null,
@@ -169,7 +201,23 @@ export const modules: Module[] = [
     },
     {
         name: 'Peace and Conflict within the soul',
-        description: "This 10-month Therapeutic  Discussion Series offers a reflective space for psychotherapists, counsellors, and trainees in Pakistan to engage with their work through a relational and integrative lens. The series responds to the relative isolation many practitioners experience and the limited opportunities for sustained, thoughtful dialogue across levels of experience and diverse therapeutic orientations.",        
+        description: `
+            <h2 className="text-2xl lg:text-3xl border-b-2 border-transparent border-b-gray-300">Overview</h2>
+            <p className="my-4 text-gray-600 text-sm md:text-base">This 10-month Therapeutic  Discussion Series offers a reflective space for psychotherapists, counsellors, and trainees in Pakistan to engage with their work through a relational and integrative lens. The series responds to the relative isolation many practitioners experience and the limited opportunities for sustained, thoughtful dialogue across levels of experience and diverse therapeutic orientations.</p>
+            <p className="my-4 text-gray-600 text-sm md:text-base">Rather than promoting a single “correct” model of psychotherapy, the series creates space for complexity, uncertainty, and ambivalence - central realities of therapeutic practice that are often marginalised in skills-based or technique-driven training.</p>
+            <h2 className="text-2xl lg:text-3xl border-b-2 border-transparent border-b-gray-300">Orientation and Focus</h2>
+            <p className="my-4 text-gray-600 text-sm md:text-base">Grounded in contemporary relational and integrative psychotherapy, the series understands therapy as a co-created process shaped by conscious and unconscious, emotional, embodied, and cultural dynamics. Productive, helpful and precise understanding of the therapeutic process is seen to emerge through deep engagement in relationship rather than through theories or prescription.</p>
+            <p className="my-4 text-gray-600 text-sm md:text-base">A central focus is an extended notion of parallel process—the unconscious repetition of relational patterns across therapy and supervision - which incorporates and depends upon attention to transference, countertransference, and enactments. Although painfully problematic for client and therapist, these largely unconscious processes are understood as vital sources of relational information about the roots of the woundings which bring the client to therapy in the first place. We will use the group context as an additional matrix to both manifest, reflect upon and contain parallel processes.</p>
+            <h2 className="text-2xl lg:text-3xl border-b-2 border-transparent border-b-gray-300">Guest Supervisors</h2>
+            <p className="my-4 text-gray-600 text-sm md:text-base">The series brings together experienced relational, psychodynamic, and integrative psychotherapists who have worked as trainers and as supervisors with Pakistani clients and practitioners. While united by a relational ethos, each supervisor brings a distinct therapeutic sensibility shaped by their training, cultural context, and professional experience.</p>
+            <p className="my-4 text-gray-600 text-sm md:text-base">This diversity reflects the realities of therapeutic practice, where no single framework can fully capture the complexity of human relationships.</p>
+            <h2 className="text-2xl lg:text-3xl border-b-2 border-transparent border-b-gray-300">Who Is This Series For?</h2>
+            <p className="my-4 text-gray-600 text-sm md:text-base">Psychotherapists and counsellors at all stages of practice</p>
+            <p className="my-4 text-gray-600 text-sm md:text-base">Trainees seeking depth beyond technique</p>
+            <p className="my-4 text-gray-600 text-sm md:text-base">Practitioners interested in relational, integrative, and psychodynamic thinking</p>
+            <p className="my-4 text-gray-600 text-sm md:text-base">Call for Participants</p>
+            <p className="my-4 text-gray-600 text-sm md:text-base">This series invites practitioners who are willing to engage thoughtfully with their therapeutic work, including moments of uncertainty, stuckness, and emotional complexity. Participants are encouraged to bring curiosity, openness, and a commitment to reflective dialogue.</p>
+            <p className="my-4 text-gray-600 text-sm md:text-base">The series offers an opportunity to develop a grounded, relational therapeutic identity within a supportive and intellectually rigorous community.</p>`,
         image: '/images/workshops/3.jpg',
         price: '20.00',
         discountPrice: null,
@@ -182,7 +230,23 @@ export const modules: Module[] = [
     },
     {
         name: 'The body follows the mind: How to re-program for a better you',
-        description: "This 10-month Therapeutic  Discussion Series offers a reflective space for psychotherapists, counsellors, and trainees in Pakistan to engage with their work through a relational and integrative lens. The series responds to the relative isolation many practitioners experience and the limited opportunities for sustained, thoughtful dialogue across levels of experience and diverse therapeutic orientations.",        
+        description: `
+            <h2 className="text-2xl lg:text-3xl border-b-2 border-transparent border-b-gray-300">Overview</h2>
+            <p className="my-4 text-gray-600 text-sm md:text-base">This 10-month Therapeutic  Discussion Series offers a reflective space for psychotherapists, counsellors, and trainees in Pakistan to engage with their work through a relational and integrative lens. The series responds to the relative isolation many practitioners experience and the limited opportunities for sustained, thoughtful dialogue across levels of experience and diverse therapeutic orientations.</p>
+            <p className="my-4 text-gray-600 text-sm md:text-base">Rather than promoting a single “correct” model of psychotherapy, the series creates space for complexity, uncertainty, and ambivalence - central realities of therapeutic practice that are often marginalised in skills-based or technique-driven training.</p>
+            <h2 className="text-2xl lg:text-3xl border-b-2 border-transparent border-b-gray-300">Orientation and Focus</h2>
+            <p className="my-4 text-gray-600 text-sm md:text-base">Grounded in contemporary relational and integrative psychotherapy, the series understands therapy as a co-created process shaped by conscious and unconscious, emotional, embodied, and cultural dynamics. Productive, helpful and precise understanding of the therapeutic process is seen to emerge through deep engagement in relationship rather than through theories or prescription.</p>
+            <p className="my-4 text-gray-600 text-sm md:text-base">A central focus is an extended notion of parallel process—the unconscious repetition of relational patterns across therapy and supervision - which incorporates and depends upon attention to transference, countertransference, and enactments. Although painfully problematic for client and therapist, these largely unconscious processes are understood as vital sources of relational information about the roots of the woundings which bring the client to therapy in the first place. We will use the group context as an additional matrix to both manifest, reflect upon and contain parallel processes.</p>
+            <h2 className="text-2xl lg:text-3xl border-b-2 border-transparent border-b-gray-300">Guest Supervisors</h2>
+            <p className="my-4 text-gray-600 text-sm md:text-base">The series brings together experienced relational, psychodynamic, and integrative psychotherapists who have worked as trainers and as supervisors with Pakistani clients and practitioners. While united by a relational ethos, each supervisor brings a distinct therapeutic sensibility shaped by their training, cultural context, and professional experience.</p>
+            <p className="my-4 text-gray-600 text-sm md:text-base">This diversity reflects the realities of therapeutic practice, where no single framework can fully capture the complexity of human relationships.</p>
+            <h2 className="text-2xl lg:text-3xl border-b-2 border-transparent border-b-gray-300">Who Is This Series For?</h2>
+            <p className="my-4 text-gray-600 text-sm md:text-base">Psychotherapists and counsellors at all stages of practice</p>
+            <p className="my-4 text-gray-600 text-sm md:text-base">Trainees seeking depth beyond technique</p>
+            <p className="my-4 text-gray-600 text-sm md:text-base">Practitioners interested in relational, integrative, and psychodynamic thinking</p>
+            <p className="my-4 text-gray-600 text-sm md:text-base">Call for Participants</p>
+            <p className="my-4 text-gray-600 text-sm md:text-base">This series invites practitioners who are willing to engage thoughtfully with their therapeutic work, including moments of uncertainty, stuckness, and emotional complexity. Participants are encouraged to bring curiosity, openness, and a commitment to reflective dialogue.</p>
+            <p className="my-4 text-gray-600 text-sm md:text-base">The series offers an opportunity to develop a grounded, relational therapeutic identity within a supportive and intellectually rigorous community.</p>`,
         image: '/images/workshops/4.jpg',
         price: '20.00',
         discountPrice: null,
@@ -195,7 +259,23 @@ export const modules: Module[] = [
     },
     {
         name: 'I wish I would have never met you: How trauma shapes regret',
-        description: "This 10-month Therapeutic  Discussion Series offers a reflective space for psychotherapists, counsellors, and trainees in Pakistan to engage with their work through a relational and integrative lens. The series responds to the relative isolation many practitioners experience and the limited opportunities for sustained, thoughtful dialogue across levels of experience and diverse therapeutic orientations.",        
+        description: `
+            <h2 className="text-2xl lg:text-3xl border-b-2 border-transparent border-b-gray-300">Overview</h2>
+            <p className="my-4 text-gray-600 text-sm md:text-base">This 10-month Therapeutic  Discussion Series offers a reflective space for psychotherapists, counsellors, and trainees in Pakistan to engage with their work through a relational and integrative lens. The series responds to the relative isolation many practitioners experience and the limited opportunities for sustained, thoughtful dialogue across levels of experience and diverse therapeutic orientations.</p>
+            <p className="my-4 text-gray-600 text-sm md:text-base">Rather than promoting a single “correct” model of psychotherapy, the series creates space for complexity, uncertainty, and ambivalence - central realities of therapeutic practice that are often marginalised in skills-based or technique-driven training.</p>
+            <h2 className="text-2xl lg:text-3xl border-b-2 border-transparent border-b-gray-300">Orientation and Focus</h2>
+            <p className="my-4 text-gray-600 text-sm md:text-base">Grounded in contemporary relational and integrative psychotherapy, the series understands therapy as a co-created process shaped by conscious and unconscious, emotional, embodied, and cultural dynamics. Productive, helpful and precise understanding of the therapeutic process is seen to emerge through deep engagement in relationship rather than through theories or prescription.</p>
+            <p className="my-4 text-gray-600 text-sm md:text-base">A central focus is an extended notion of parallel process—the unconscious repetition of relational patterns across therapy and supervision - which incorporates and depends upon attention to transference, countertransference, and enactments. Although painfully problematic for client and therapist, these largely unconscious processes are understood as vital sources of relational information about the roots of the woundings which bring the client to therapy in the first place. We will use the group context as an additional matrix to both manifest, reflect upon and contain parallel processes.</p>
+            <h2 className="text-2xl lg:text-3xl border-b-2 border-transparent border-b-gray-300">Guest Supervisors</h2>
+            <p className="my-4 text-gray-600 text-sm md:text-base">The series brings together experienced relational, psychodynamic, and integrative psychotherapists who have worked as trainers and as supervisors with Pakistani clients and practitioners. While united by a relational ethos, each supervisor brings a distinct therapeutic sensibility shaped by their training, cultural context, and professional experience.</p>
+            <p className="my-4 text-gray-600 text-sm md:text-base">This diversity reflects the realities of therapeutic practice, where no single framework can fully capture the complexity of human relationships.</p>
+            <h2 className="text-2xl lg:text-3xl border-b-2 border-transparent border-b-gray-300">Who Is This Series For?</h2>
+            <p className="my-4 text-gray-600 text-sm md:text-base">Psychotherapists and counsellors at all stages of practice</p>
+            <p className="my-4 text-gray-600 text-sm md:text-base">Trainees seeking depth beyond technique</p>
+            <p className="my-4 text-gray-600 text-sm md:text-base">Practitioners interested in relational, integrative, and psychodynamic thinking</p>
+            <p className="my-4 text-gray-600 text-sm md:text-base">Call for Participants</p>
+            <p className="my-4 text-gray-600 text-sm md:text-base">This series invites practitioners who are willing to engage thoughtfully with their therapeutic work, including moments of uncertainty, stuckness, and emotional complexity. Participants are encouraged to bring curiosity, openness, and a commitment to reflective dialogue.</p>
+            <p className="my-4 text-gray-600 text-sm md:text-base">The series offers an opportunity to develop a grounded, relational therapeutic identity within a supportive and intellectually rigorous community.</p>`,
         image: '/images/workshops/5.jpg',
         price: '20.00',
         discountPrice: null,
@@ -208,7 +288,23 @@ export const modules: Module[] = [
     },
     {
         name: 'Why love and hate are the two sides of the same coin',
-        description: "This 10-month Therapeutic  Discussion Series offers a reflective space for psychotherapists, counsellors, and trainees in Pakistan to engage with their work through a relational and integrative lens. The series responds to the relative isolation many practitioners experience and the limited opportunities for sustained, thoughtful dialogue across levels of experience and diverse therapeutic orientations.",        
+        description: `
+            <h2 className="text-2xl lg:text-3xl border-b-2 border-transparent border-b-gray-300">Overview</h2>
+            <p className="my-4 text-gray-600 text-sm md:text-base">This 10-month Therapeutic  Discussion Series offers a reflective space for psychotherapists, counsellors, and trainees in Pakistan to engage with their work through a relational and integrative lens. The series responds to the relative isolation many practitioners experience and the limited opportunities for sustained, thoughtful dialogue across levels of experience and diverse therapeutic orientations.</p>
+            <p className="my-4 text-gray-600 text-sm md:text-base">Rather than promoting a single “correct” model of psychotherapy, the series creates space for complexity, uncertainty, and ambivalence - central realities of therapeutic practice that are often marginalised in skills-based or technique-driven training.</p>
+            <h2 className="text-2xl lg:text-3xl border-b-2 border-transparent border-b-gray-300">Orientation and Focus</h2>
+            <p className="my-4 text-gray-600 text-sm md:text-base">Grounded in contemporary relational and integrative psychotherapy, the series understands therapy as a co-created process shaped by conscious and unconscious, emotional, embodied, and cultural dynamics. Productive, helpful and precise understanding of the therapeutic process is seen to emerge through deep engagement in relationship rather than through theories or prescription.</p>
+            <p className="my-4 text-gray-600 text-sm md:text-base">A central focus is an extended notion of parallel process—the unconscious repetition of relational patterns across therapy and supervision - which incorporates and depends upon attention to transference, countertransference, and enactments. Although painfully problematic for client and therapist, these largely unconscious processes are understood as vital sources of relational information about the roots of the woundings which bring the client to therapy in the first place. We will use the group context as an additional matrix to both manifest, reflect upon and contain parallel processes.</p>
+            <h2 className="text-2xl lg:text-3xl border-b-2 border-transparent border-b-gray-300">Guest Supervisors</h2>
+            <p className="my-4 text-gray-600 text-sm md:text-base">The series brings together experienced relational, psychodynamic, and integrative psychotherapists who have worked as trainers and as supervisors with Pakistani clients and practitioners. While united by a relational ethos, each supervisor brings a distinct therapeutic sensibility shaped by their training, cultural context, and professional experience.</p>
+            <p className="my-4 text-gray-600 text-sm md:text-base">This diversity reflects the realities of therapeutic practice, where no single framework can fully capture the complexity of human relationships.</p>
+            <h2 className="text-2xl lg:text-3xl border-b-2 border-transparent border-b-gray-300">Who Is This Series For?</h2>
+            <p className="my-4 text-gray-600 text-sm md:text-base">Psychotherapists and counsellors at all stages of practice</p>
+            <p className="my-4 text-gray-600 text-sm md:text-base">Trainees seeking depth beyond technique</p>
+            <p className="my-4 text-gray-600 text-sm md:text-base">Practitioners interested in relational, integrative, and psychodynamic thinking</p>
+            <p className="my-4 text-gray-600 text-sm md:text-base">Call for Participants</p>
+            <p className="my-4 text-gray-600 text-sm md:text-base">This series invites practitioners who are willing to engage thoughtfully with their therapeutic work, including moments of uncertainty, stuckness, and emotional complexity. Participants are encouraged to bring curiosity, openness, and a commitment to reflective dialogue.</p>
+            <p className="my-4 text-gray-600 text-sm md:text-base">The series offers an opportunity to develop a grounded, relational therapeutic identity within a supportive and intellectually rigorous community.</p>`,
         image: '/images/workshops/6.png',
         price: '20.00',
         discountPrice: '15.00',
