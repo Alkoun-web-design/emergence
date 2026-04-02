@@ -1,16 +1,22 @@
-import { div } from "motion/react-client";
+// import { div } from "motion/react-client";
 import Speakers from "@/components/Speakers"
+import {speakers} from '@/lib/modules'
+import type {Module, Speaker} from "@/lib/modules";
 
-export default function ModuleDetails(){
 
-    const showAll = true;
+export default function ModuleDetails(module:Module) {
+
+   const showAll = true;
 
     return (
-        <>
+        <>        
+                  <h1 className="col-span-full">{module.name}</h1>
                     <div className="shadow-lg grid grid-cols-subgrid col-start-2 col-end-12 bg-gray-50 rounded-lg p-8 text-gray-900">
 
-                        <div className="col-span-full h-80 md:h-full w-full md:col-span-5 bg-[url(/water-ripples-4.webp)] md:bg-contain bg-no-repeat bg-cover bg-fixed rounded-md">
-                            {/* <img className="lg:p-4" src="" alt="Workshop Image" /> */}
+                        {/* <div className={`col-span-full h-80 md:h-full w-full md:col-span-5 bg-[url(/water-ripples-4.webp)] md:bg-contain bg-no-repeat bg-cover bg-fixed rounded-md`}> */}
+                        {/* <div className='col-span-full h-80 md:h-full w-full md:col-span-5 rounded-md'> */}
+                        <div className={`col-span-full h-80 md:h-full w-full md:col-span-5 bg-[url(${module.image})] md:bg-contain bg-no-repeat bg-cover bg-fixed rounded-md`}>
+                            {/* <img className="lg:p-4" src={module.image} alt="Workshop Image" /> */}
                         </div>
 
                         <div className={`${showAll ? 'h-fit col-span-full md:col-span-5 overflow-hidden' : 'h-80 md:h-116 lg:h-160 xl:h-180 col-span-full md:col-span-6 overflow-hidden' } `}>
@@ -35,23 +41,43 @@ export default function ModuleDetails(){
                             <p className="my-4 text-gray-600 text-sm md:text-base">The series offers an opportunity to develop a grounded, relational therapeutic identity within a supportive and intellectually rigorous community.</p>
                         </div>
                         <div className="col-start-7 col-end-12">
-                            <button className="text-nowrap text-sm md:text-base cursor-pointer px-4 py-2 transition-all border border-primary hover:bg-gray-50 hover:text-primary bg-primary text-gray-50 rounded-md mx-auto my-4">
+                            <button className="font-semibold text-nowrap text-sm md:text-base cursor-pointer px-4 py-2 transition-all border border-primary hover:bg-gray-50 hover:text-primary bg-primary text-gray-50 rounded-md mx-auto my-4">
                                 Read More
                             </button>
                        </div>
                     </div>
 
                     <div className="shadow-lg grid-cols-subgrid col-span-full lg:col-start-2 lg:col-end-8 bg-gray-50 rounded-lg p-8 text-gray-900">
-                        <h2 className="text-2xl lg:text-3xl mb-4 border-b-2 border-transparent border-b-gray-300">Guest Supervisors</h2>
+                        <h2 className="text-2xl lg:text-3xl mb-4 border-b-2 border-transparent border-b-gray-300">
+                           Guest Supervisors
+                        </h2>
 
-                        <div x-data="{ profileIsVisible: false }" className="py-2 transition-all duration-500 ease-in-out">
+                        { module.speakers ? 
+
+                           speakers
+                           .filter(speaker => module.speakers.includes(speaker.name))
+                           .map((speaker) => (
+                              <Speakers 
+                                 key={speaker.name}
+                                 name={speaker.name} 
+                                 image={speaker.image} 
+                                 description={speaker.description} 
+                              />
+                           ))
+                           :
+                           <div>
+                              <h3>Speakers are yet to be decided.</h3>
+                           </div>
+                        }
+
+                        {/* <div x-data="{ profileIsVisible: false }" className="py-2 transition-all duration-500 ease-in-out">
                            <div className="border-b-2 border-transparent border-b-gray-300 flex flex-row">
                               <div className="justify-start">
                                  <img loading="lazy"  className="ring-2 w-20 h-20 md:w-28 md:h-28 rounded-full" src="/workshop/soth.webp" alt="Michael Soth" />
                                  <h3 className="my-1 text-primary text-lg lg:text-2xl">Michael Soth</h3>
                               </div>
                               <div className="my-auto ml-auto">
-                                 <button className="text-nowrap text-sm md:text-base px-4 py-2 transition-all border border-primary hover:bg-gray-50 hover:text-primary bg-primary text-gray-50 rounded-md"></button> 
+                                 <button className="font-semibold text-nowrap text-sm md:text-base px-4 py-2 transition-all border border-primary hover:bg-gray-50 hover:text-primary bg-primary text-gray-50 rounded-md"></button> 
                               </div>
                            </div>
                            <div  className="text-sm md:text-base">
@@ -223,7 +249,8 @@ export default function ModuleDetails(){
                               <p className="my-4 text-gray-600">She believes that while structure, theory, and guidance are important, deep change tends to emerge through the quality of the relational space itself. When a space is both containing and able to hold challenge, moments of genuine transformation can unfold - often gradually, sometimes unexpectedly - reshaping habitual patterns and opening new ways of relating to self and others.</p>
                               <p className="my-4 text-gray-600">Website: <a className="text-primary underline" href="https://zahbiasarfraz.com/">https://zahbiasarfraz.com/</a></p>
                            </div>
-                        </div>
+                        </div> */}
+
                     </div>
 
                     <div className="shadow-lg col-span-full lg:sticky lg:top-16 lg:col-start-8 lg:col-end-12 bg-gray-50 h-fit rounded-lg p-8 text-gray-900">
@@ -237,9 +264,9 @@ export default function ModuleDetails(){
                           <li className="my-2 text-gray-600">Sessions are intentionally loosely structured, allowing supervisors and participants to work with what emerges in the relational field. Supervisors model how complexity can be held, reflected upon, and used constructively in therapeutic work.</li>
                        </ul>
                        <div className="flex justify-center my-4">
-                          <a href="https://forms.gle/7wpiJXNioFoaYKtz9" className="text-nowrap text-sm md:text-base cursor-pointer px-6 py-4 transition-all border border-primary hover:bg-gray-50 hover:text-primary bg-primary text-gray-50 rounded-md">Register</a>
+                          <a href="https://forms.gle/7wpiJXNioFoaYKtz9" className=" font-semibold text-nowrap text-sm md:text-base cursor-pointer px-6 py-4 transition-all border border-primary hover:bg-gray-50 hover:text-primary bg-primary text-gray-50 rounded-md">Register</a>
                        </div>
                     </div>
-        </>
-    )
+      </>
+   )
 }

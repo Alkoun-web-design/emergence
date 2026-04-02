@@ -18,7 +18,7 @@ export type Module = {
     updatedAt: string,
     id?: string,
     published: boolean,
-    speakers: Speaker[],
+    speakers: string[],
     modulesSold?: number,
     category?: string
 }
@@ -106,15 +106,6 @@ export const speakers: Speaker[] = [
         `,
     },
     {
-        name: 'Daheem Din',
-        image: "/workshop/4.webp",
-        description: `
-            <p className="my-4 text-gray-600">Daheem Din is a certified Marriage and Family Therapist and co-founder of The Therapeutic Community in Pakistan. With extensive professional experience in both the United States and Pakistan, she brings a systemic, integrative, and culturally attuned lens to her clinical and training work.</p>
-            <p className="my-4 text-gray-600">Her primary modality is Relational and Integrative Psychotherapy, grounded in a strong systemic and cultural framework. Whether working with individuals, couples, or families, she understands psychological distress as inseparable from the relational, social, and cultural systems in which clients are embedded. Her clinical practice integrates psychodynamic and attachment-based approaches, systemic and family therapy, trauma-informed practice, humanistic and experiential therapies, somatic awareness, and cognitive or behavioral tools when clinically appropriate. Central to her work is close attention to the here-and-now relational field that emerges between client and therapist.</p>
-            <p className="my-4 text-gray-600">In addition to her clinical work, Daheem is actively involved in supervising therapists, facilitating support and process groups, and delivering organizational and institutional trainings. She has played a key role in introducing Level 3 CPCAB courses to Pakistan, contributing significantly to the professional development and ethical grounding of emerging mental health practitioners. Her work with men’s groups and process-oriented interventions reflects a nuanced, empathic, and depth-oriented style, offering trainees and supervisees a clear understanding of her clinical perspective and methodology.</p>
-        `,
-    },
-    {
         name: 'Sabrina Nangiana',
         image: "/workshop/5.webp",
         description: `
@@ -123,6 +114,16 @@ export const speakers: Speaker[] = [
             <p className="my-4 text-gray-600">Sabrina is a co-founder of The Therapeutic Community and has played a key role in introducing CPCAB Level 3 training in the country, contributing meaningfully to the ethical and professional grounding of emerging practitioners.</p>
             <p className="my-4 text-gray-600">In supervision and training spaces, Sabrina is known for bringing her full, human presence into the room. She pays close attention to the emotional atmosphere, bodily responses, and unspoken dynamics that emerge between people. Rather than working only at the level of technique, she uses feelings, resonance, and moments of discomfort as clinical material - supporting practitioners to notice what is missing, what feels difficult to name, and how the body can guide understanding when the room feels charged.</p>
             <p className="my-4 text-gray-600">Within this supervision discussion series, Sabrina brings a relational sensibility that honours vulnerability, curiosity, and shared learning, inviting therapists to slow down, stay present, and think together about the lived experience of therapeutic work.</p>
+        `,
+    },
+    {
+        name: 'Humaira Hassnain',
+        image: "/workshop/2.webp",
+        description: `
+            <p className="my-4 text-gray-600">Humaira Hassnain is an integrative psychotherapist and clinical supervisor with over two decades of experience working with individuals, couples, families, and groups across a range of clinical settings. She began her professional journey as a clinical psychologist, training and working in hospital and community contexts, which continues to shape her careful attention to assessment, ethical practice, and thoughtful clinical formulation.</p>
+            <p className="my-4 text-gray-600">Her work is informed by an integrative, trauma-informed approach, drawing from relational and systemic therapy, attachment-based work, parts-based approaches, mindfulness, and compassion-focused practice. She is particularly interested in emotional processes, relational patterns, and the cultural and intergenerational stories people carry with them into therapy. Her way of working values depth, curiosity, and emotional safety, allowing therapy to unfold at a pace that feels respectful and containing rather than rushed.</p>
+            <p className="my-4 text-gray-600">As a supervisor, Humaira works from an integrative and relational framework informed by parts-based thinking and the 7-Eyed Model of Supervision. She offers a collaborative supervisory space where therapists can reflect on clinical work, ethical questions, and their own responses to the work with honesty and care.</p>
+            <p className="my-4 text-gray-600">At the heart of her work is a commitment to slowing down, listening closely, and supporting therapists to develop clarity, confidence, and a grounded therapeutic voice—while remaining ethical, reflective, and human in the work.</p>
         `,
     },
     {
@@ -142,7 +143,8 @@ export const modules: Module[] = [
     {
         name: '10-Month Therapeutic Discussion Series on Relational and Integrative Psychotherapy in Pakistan',
         description: "This 10-month Therapeutic  Discussion Series offers a reflective space for psychotherapists, counsellors, and trainees in Pakistan to engage with their work through a relational and integrative lens. The series responds to the relative isolation many practitioners experience and the limited opportunities for sustained, thoughtful dialogue across levels of experience and diverse therapeutic orientations.",
-        image: '/images/workshops/1.jpg',
+        image: '/water-ripples-4.webp',
+        // image: '/images/workshops/1.jpg',
         price: '20.00',
         discountPrice: null,
         status: 'Complete',
@@ -150,7 +152,7 @@ export const modules: Module[] = [
         createdAt: '2023-02-01T00:00:00.000Z',
         updatedAt: '2023-02-01T00:00:00.000Z',
         published: true,
-        speakers: []
+        speakers: ['Michael Soth', 'Omar Tauseef', 'Hina Azfer', 'Maryam Suheyl', 'Russel Rose', 'Jasmyn Rana', 'Daheem Din', 'Sabrina Nangiana', 'Humaira Hassnain','Zahbia Sarfraz']
     },
     {
         name: 'Dancing with the devil: Accepting our inner-demons',
