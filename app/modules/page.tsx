@@ -1,4 +1,4 @@
-import Header from "@/components/Header"
+// import Header from "@/components/Header"
 import ModuleCard from "@/components/ModuleCard"
 import {modules} from "@/lib/modules"
 import type { Module } from "@/lib/modules"
