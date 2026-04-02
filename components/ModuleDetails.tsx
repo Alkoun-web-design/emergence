@@ -1,4 +1,5 @@
 import { div } from "motion/react-client";
+import Speakers from "@/components/Speakers"
 
 export default function ModuleDetails(){
 
@@ -34,7 +35,7 @@ export default function ModuleDetails(){
                             <p className="my-4 text-gray-600 text-sm md:text-base">The series offers an opportunity to develop a grounded, relational therapeutic identity within a supportive and intellectually rigorous community.</p>
                         </div>
                         <div className="col-start-7 col-end-12">
-                            <button className="text-nowrap text-sm md:text-base cursor-pointer px-4 py-2 transition-all border border-[#4A90A3] hover:bg-gray-50 hover:text-[#4A90A3] bg-[#4A90A3] text-gray-50 rounded-md mx-auto my-4">
+                            <button className="text-nowrap text-sm md:text-base cursor-pointer px-4 py-2 transition-all border border-primary hover:bg-gray-50 hover:text-primary bg-primary text-gray-50 rounded-md mx-auto my-4">
                                 Read More
                             </button>
                        </div>
@@ -47,10 +48,10 @@ export default function ModuleDetails(){
                            <div className="border-b-2 border-transparent border-b-gray-300 flex flex-row">
                               <div className="justify-start">
                                  <img loading="lazy"  className="ring-2 w-20 h-20 md:w-28 md:h-28 rounded-full" src="/workshop/soth.webp" alt="Michael Soth" />
-                                 <h3 className="my-1 text-[#4A90A3] text-lg lg:text-2xl">Michael Soth</h3>
+                                 <h3 className="my-1 text-primary text-lg lg:text-2xl">Michael Soth</h3>
                               </div>
                               <div className="my-auto ml-auto">
-                                 <button className="text-nowrap text-sm md:text-base px-4 py-2 transition-all border border-[#4A90A3] hover:bg-gray-50 hover:text-[#4A90A3] bg-[#4A90A3] text-gray-50 rounded-md"></button> 
+                                 <button className="text-nowrap text-sm md:text-base px-4 py-2 transition-all border border-primary hover:bg-gray-50 hover:text-primary bg-primary text-gray-50 rounded-md"></button> 
                               </div>
                            </div>
                            <div  className="text-sm md:text-base">
@@ -58,18 +59,18 @@ export default function ModuleDetails(){
                               <p className="my-4 text-gray-600">Drawing on concepts, values, and ways of working from a broad-spectrum range of psychotherapeutic approaches across both psychoanalytic and humanistic traditions, he understands the therapeutic relationship as a bodymind process between two people who are simultaneously wounded and whole. His work places particular emphasis on relational process, enactment, unconscious communication, and the ways in which personal history, embodied experience, and socio-cultural context shape the therapeutic field. He has written numerous articles and several book chapters, and is a frequent presenter at international conferences and professional trainings.</p>
                               <p className="my-4 text-gray-600">Extracts from his published writing, along with summaries of presentations and training hand-outs, are available at www.integra-cpd.co.uk. He is co-editor of the Handbook of Body Psychotherapy and Somatic Psychology (2015).</p>
                               <p className="my-4 text-gray-600">Michael Soth has been working with Pakistani psychotherapists and supervisors as a trainer and supervisor since 2010. Throughout this time, he has been a committed and generous supporter of the development of psychotherapy in Pakistan, playing an instrumental role in nurturing reflective, relational and culturally attuned clinical practice. Through sustained long-term engagement with therapists practicing both within Pakistan and across the Pakistani diaspora, he has developed a nuanced understanding of how cultural, familial, religious and socio-political contexts enter the therapeutic relationship – not as external variables to be managed, but as lived realities that shape both therapist and client. Central to his work is a focus on character transformation. His approach attends closely to unconscious processes, enactments and parallel process, inviting therapists to work with what is being lived and re-enacted in the room. His influence has contributed to a meaningful shift in how psychotherapy is thought about and practiced in Pakistan and across the world.</p>
-                              <p className="my-4 text-gray-600">Website: <a className="text-[#4A90A3] underline" href="http://soth.co.uk/">http://soth.co.uk/</a></p>
+                              <p className="my-4 text-gray-600">Website: <a className="text-primary underline" href="http://soth.co.uk/">http://soth.co.uk/</a></p>
                            </div>
                         </div>     
 
                         <div x-data="{ profileIsVisible: false }" className="py-2 transition-all duration-500 ease-in-out">
                            <div className="border-b-2 border-transparent border-b-gray-300 flex flex-row">
                               <div className="justify-start">
-                                 <img loading="lazy" className="ring-1 ring-[#4A90A3] w-20 h-20 md:w-28 md:h-28 rounded-full" src="/workshop/3.webp" alt="Omer Tauseef" />
-                                 <h3 className="my-1 text-[#4A90A3] text-lg lg:text-2xl">Omar Tauseef</h3>
+                                 <img loading="lazy" className="ring-1 ring-primary w-20 h-20 md:w-28 md:h-28 rounded-full" src="/workshop/3.webp" alt="Omer Tauseef" />
+                                 <h3 className="my-1 text-primary text-lg lg:text-2xl">Omar Tauseef</h3>
                               </div>
                               <div className="my-auto ml-auto">
-                                 <button className="text-nowrap text-sm md:text-base px-4 py-2 transition-all border border-[#4A90A3] hover:bg-gray-50 hover:text-[#4A90A3] bg-[#4A90A3] text-gray-50 rounded-md"></button> 
+                                 <button className="text-nowrap text-sm md:text-base px-4 py-2 transition-all border border-primary hover:bg-gray-50 hover:text-primary bg-primary text-gray-50 rounded-md"></button> 
                               </div>
                            </div>
                            <div  className="text-sm md:text-base">
@@ -84,10 +85,10 @@ export default function ModuleDetails(){
                            <div className="border-b-2 border-transparent border-b-gray-300 flex flex-row">
                               <div className="justify-start">
                                  <img loading="lazy"   className="ring-2 w-20 h-20 md:w-28 md:h-28 rounded-full" src="/workshop/10.webp" alt="Hina Azfer" />
-                                 <h3 className="my-1 text-[#4A90A3] text-lg lg:text-2xl">Hina Azfar</h3>
+                                 <h3 className="my-1 text-primary text-lg lg:text-2xl">Hina Azfar</h3>
                               </div>
                               <div className="my-auto ml-auto">
-                                 <button   className="text-nowrap text-sm md:text-base px-4 py-2 transition-all border border-[#4A90A3] hover:bg-gray-50 hover:text-[#4A90A3] bg-[#4A90A3] text-gray-50 rounded-md"></button> 
+                                 <button   className="text-nowrap text-sm md:text-base px-4 py-2 transition-all border border-primary hover:bg-gray-50 hover:text-primary bg-primary text-gray-50 rounded-md"></button> 
                               </div>
                            </div>
                            <div  className="text-sm md:text-base">
@@ -101,10 +102,10 @@ export default function ModuleDetails(){
                            <div className="border-b-2 border-transparent border-b-gray-300 flex flex-row">
                               <div className="justify-start">
                                  <img loading="lazy"  className="ring-2  w-20 h-20 md:w-28 md:h-28 rounded-full" src="/workshop/9.webp" alt="Maryam Suheyl" />
-                                 <h3 className="my-1 text-[#4A90A3] text-lg lg:text-2xl">Maryam Suheyl</h3> 
+                                 <h3 className="my-1 text-primary text-lg lg:text-2xl">Maryam Suheyl</h3> 
                               </div>
                               <div className="my-auto ml-auto">
-                                 <button   className="text-nowrap text-sm md:text-base px-4 py-2 transition-all border border-[#4A90A3] hover:bg-gray-50 hover:text-[#4A90A3] bg-[#4A90A3] text-gray-50 rounded-md"></button> 
+                                 <button   className="text-nowrap text-sm md:text-base px-4 py-2 transition-all border border-primary hover:bg-gray-50 hover:text-primary bg-primary text-gray-50 rounded-md"></button> 
                               </div>
                            </div>
                            <div  className="text-sm md:text-base">
@@ -118,11 +119,11 @@ export default function ModuleDetails(){
                         <div x-data="{ profileIsVisible: false }" className="py-2 transition-all duration-500 ease-in-out">
                            <div className="border-b-2 border-transparent border-b-gray-300 flex flex-row">
                               <div className="justify-start">
-                                 <img loading="lazy"  className="ring-2 w-20 h-20 md:w-28 md:h-28 rounded-full transition-all" src="/workshop/7.webp" alt="Ruseel Rose" />
-                                 <h3 className="my-1 text-[#4A90A3] text-lg lg:text-2xl">Russell Rose</h3>        
+                                 <img loading="lazy"  className="ring-2 w-20 h-20 md:w-28 md:h-28 rounded-full transition-all" src="/workshop/7.webp" alt="Russel Rose" />
+                                 <h3 className="my-1 text-primary text-lg lg:text-2xl">Russell Rose</h3>        
                               </div>
                               <div className="my-auto ml-auto">
-                                 <button   className="text-nowrap text-sm md:text-base px-4 py-2 transition-all border border-[#4A90A3] hover:bg-gray-50 hover:text-[#4A90A3] bg-[#4A90A3] text-gray-50 rounded-md"></button> 
+                                 <button   className="text-nowrap text-sm md:text-base px-4 py-2 transition-all border border-primary hover:bg-gray-50 hover:text-primary bg-primary text-gray-50 rounded-md"></button> 
                               </div>
                            </div>
                            <div  className="text-sm md:text-base">
@@ -132,7 +133,7 @@ export default function ModuleDetails(){
                               <p className="my-4 text-gray-600">He sees the psyche as fundamentally holistic, relational, systemic, and intergenerational; and understands that it is impossible to really understand or experience our selves without as many contexts as possible; and if fractality is to be believed then these contexts are by definition endless.</p>
                               <p className="my-4 text-gray-600">Russell believes that while knowledge and experience can be facilitated, deep and lasting change emerges spontaneously when a safe-enough and confrontational-enough environment is facilitated. We change incrementally, but also in profound transformations that are as hard-wired into our psyche as an infant’s emerging capacity to walk. It is our relationship with these periods of emergent transformation that often define and bind-up our psyches into stagnant habituality or untethered chaos.</p>
                               <p className="my-4 text-gray-600">For a decade, Russell has worked closely with Pakistani psychotherapists and clients as a psychotherapist and clinical supervisor. Over this time, he has been a steady and generous presence in the development of psychotherapy in Pakistan, offering long-term commitment, mentorship, and thoughtful clinical engagement. He brings a nuanced and deeply respectful understanding of cultural, relational, and contextual dynamics, and has been a valued supporter of the psychotherapy community, contributing quietly but significantly to how the field has taken shape and continues to grow.</p>
-                              <p className="my-4 text-gray-600">Website: <a className="text-[#4A90A3] underline" href="https://www.russellrose.co.uk">https://www.russellrose.co.uk</a>/</p>
+                              <p className="my-4 text-gray-600">Website: <a className="text-primary underline" href="https://www.russellrose.co.uk">https://www.russellrose.co.uk</a>/</p>
                            </div>
                         </div>
 
@@ -140,15 +141,15 @@ export default function ModuleDetails(){
                            <div className="border-b-2 border-transparent border-b-gray-300 flex flex-row">
                               <div className="justify-start">
                                  <img loading="lazy"  className="ring-2 w-20 h-20 md:w-28 md:h-28 rounded-full" src="/workshop/8.webp" alt="Jasmyn Raza" />
-                                 <h3 className="my-1 text-[#4A90A3] text-lg lg:text-2xl">Jasmyn Rana</h3>
+                                 <h3 className="my-1 text-primary text-lg lg:text-2xl">Jasmyn Rana</h3>
                               </div>
                               <div className="my-auto ml-auto">
-                                 <button   className="text-nowrap text-sm md:text-base px-4 py-2 transition-all border border-[#4A90A3] hover:bg-gray-50 hover:text-[#4A90A3] bg-[#4A90A3] text-gray-50 rounded-md"></button> 
+                                 <button   className="text-nowrap text-sm md:text-base px-4 py-2 transition-all border border-primary hover:bg-gray-50 hover:text-primary bg-primary text-gray-50 rounded-md"></button> 
                               </div>
                            </div>
                            <div  className="text-sm md:text-base">
                               <p className="my-4 text-gray-600">Jasmyn Rana is the Founder of Therapy is Brown, and is a mental health counsellor and psychotherapist and clinical supervisor with 14 years experience in the field. Jasmyn has specialist interest in couples therapy but has also worked with groups and organizations over her career. Being the child of a multicultural home, she is attuned to delivering culturally sensitive therapy. Her modalities lend primarily from psychodynamic and relational work.</p>
-                              <p className="my-4 text-gray-600">While having a keen interest in theoretical underpinnings, Jasmyn appreciates the deeper human/spiritual awareness of what is largely unsaid and unseen, that's allows elements of connection, awareness and transformation to emerge.</p>
+                              <p className="my-4 text-gray-600">While having a keen interest in theoretical underpinnings, Jasmyn appreciates the deeper human/spiritual awareness of what is largely unsaid and unseen, that&aposs allows elements of connection, awareness and transformation to emerge.</p>
                            </div>
                         </div>
 
@@ -156,10 +157,10 @@ export default function ModuleDetails(){
                            <div className="border-b-2 border-transparent border-b-gray-300 flex flex-row">
                               <div className="justify-start">
                                  <img loading="lazy"  className="ring-2 w-20 h-20 md:w-28 md:h-28 rounded-full" src="/workshop/4.webp" alt="Daheem Din" />
-                                 <h3 className="my-1 text-[#4A90A3] text-lg lg:text-2xl">Daheem Din</h3>
+                                 <h3 className="my-1 text-primary text-lg lg:text-2xl">Daheem Din</h3>
                               </div>
                               <div className="my-auto ml-auto">
-                                 <button   className="text-nowrap text-sm md:text-base px-4 py-2 transition-all border border-[#4A90A3] hover:bg-gray-50 hover:text-[#4A90A3] bg-[#4A90A3] text-gray-50 rounded-md"></button> 
+                                 <button   className="text-nowrap text-sm md:text-base px-4 py-2 transition-all border border-primary hover:bg-gray-50 hover:text-primary bg-primary text-gray-50 rounded-md"></button> 
                               </div>
                            </div>
                            <div  className="text-sm md:text-base">
@@ -173,10 +174,10 @@ export default function ModuleDetails(){
                            <div className="border-b-2 border-transparent border-b-gray-300 flex flex-row">
                               <div className="justify-start">
                                  <img loading="lazy"   className="ring-2 w-20 h-20 md:w-28 md:h-28 rounded-full" src="/workshop/5.webp" alt="Sabrina Nangiana" />
-                                 <h3 className="my-1 text-[#4A90A3] text-lg lg:text-2xl">Sabrina Nangiana</h3>
+                                 <h3 className="my-1 text-primary text-lg lg:text-2xl">Sabrina Nangiana</h3>
                               </div>
                               <div className="my-auto ml-auto">
-                                 <button   className="text-nowrap text-sm md:text-base px-4 py-2 transition-all border border-[#4A90A3] hover:bg-gray-50 hover:text-[#4A90A3] bg-[#4A90A3] text-gray-50 rounded-md"></button> 
+                                 <button   className="text-nowrap text-sm md:text-base px-4 py-2 transition-all border border-primary hover:bg-gray-50 hover:text-primary bg-primary text-gray-50 rounded-md"></button> 
                               </div>
                            </div>
                            <div  className="text-sm md:text-base">
@@ -192,10 +193,10 @@ export default function ModuleDetails(){
                            <div className="border-b-2 border-transparent border-b-gray-300 flex flex-row">
                               <div className="justify-start">
                                  <img loading="lazy"  className="ring-2 w-20 h-20 md:w-28 md:h-28 rounded-full" src="/workshop/2.webp" alt="Humaira Hassnain" />
-                                 <h3 className="my-1 text-[#4A90A3] text-lg lg:text-2xl">Humaira Hassnain</h3>
+                                 <h3 className="my-1 text-primary text-lg lg:text-2xl">Humaira Hassnain</h3>
                               </div>
                               <div className="my-auto ml-auto">
-                                 <button   className="text-nowrap text-sm md:text-base px-4 py-2 transition-all border border-[#4A90A3] hover:bg-gray-50 hover:text-[#4A90A3] bg-[#4A90A3] text-gray-50 rounded-md"></button> 
+                                 <button   className="text-nowrap text-sm md:text-base px-4 py-2 transition-all border border-primary hover:bg-gray-50 hover:text-primary bg-primary text-gray-50 rounded-md"></button> 
                               </div>
                            </div>
                            <div  className="text-sm md:text-base">
@@ -210,17 +211,17 @@ export default function ModuleDetails(){
                            <div className="border-b-2 border-transparent border-b-gray-300 flex flex-row">
                               <div className="justify-start">
                                  <img loading="lazy"  className="ring-2 w-20 h-20 md:w-28 md:h-28 rounded-full" src="/workshop/1.webp" alt="Zahbia Saffraz" />
-                                 <h3 className="my-1 text-[#4A90A3] text-lg lg:text-2xl">Zahbia Sarfraz</h3>
+                                 <h3 className="my-1 text-primary text-lg lg:text-2xl">Zahbia Sarfraz</h3>
                               </div>
                               <div className="my-auto ml-auto">
-                                 <button   className="text-nowrap text-sm md:text-base px-4 py-2 transition-all border border-[#4A90A3] hover:bg-gray-50 hover:text-[#4A90A3] bg-[#4A90A3] text-gray-50 rounded-md"></button> 
+                                 <button   className="text-nowrap text-sm md:text-base px-4 py-2 transition-all border border-primary hover:bg-gray-50 hover:text-primary bg-primary text-gray-50 rounded-md"></button> 
                               </div>
                            </div>
                            <div  className="text-sm md:text-base" >
                               <p className="my-4 text-gray-600">Zahbia Sarfraz is a psychotherapist and clinical supervisor with over a decade of experience working with adults across a wide range of emotional, relational and existential concerns. Her work is grounded in psychodynamic and relational orientation, with a deepening engagement with Jungian psychology, particularly the role of unconscious processes, symbolism and dreams in therapeutic work.</p>
                               <p className="my-4 text-gray-600">Zahbia understands the psyche as relational and shaped across multiple layers of personal history, relationships, culture, and unconscious life. She holds that psychological distress and change cannot be understood in isolation from these contexts, and that therapeutic work requires openness to complexity rather than reliance on singular explanations or techniques.</p>
                               <p className="my-4 text-gray-600">She believes that while structure, theory, and guidance are important, deep change tends to emerge through the quality of the relational space itself. When a space is both containing and able to hold challenge, moments of genuine transformation can unfold - often gradually, sometimes unexpectedly - reshaping habitual patterns and opening new ways of relating to self and others.</p>
-                              <p className="my-4 text-gray-600">Website: <a className="text-[#4A90A3] underline" href="https://zahbiasarfraz.com/">https://zahbiasarfraz.com/</a></p>
+                              <p className="my-4 text-gray-600">Website: <a className="text-primary underline" href="https://zahbiasarfraz.com/">https://zahbiasarfraz.com/</a></p>
                            </div>
                         </div>
                     </div>
@@ -236,7 +237,7 @@ export default function ModuleDetails(){
                           <li className="my-2 text-gray-600">Sessions are intentionally loosely structured, allowing supervisors and participants to work with what emerges in the relational field. Supervisors model how complexity can be held, reflected upon, and used constructively in therapeutic work.</li>
                        </ul>
                        <div className="flex justify-center my-4">
-                          <a href="https://forms.gle/7wpiJXNioFoaYKtz9" className="text-nowrap text-sm md:text-base cursor-pointer px-6 py-4 transition-all border border-[#4A90A3] hover:bg-gray-50 hover:text-[#4A90A3] bg-[#4A90A3] text-gray-50 rounded-md">Register</a>
+                          <a href="https://forms.gle/7wpiJXNioFoaYKtz9" className="text-nowrap text-sm md:text-base cursor-pointer px-6 py-4 transition-all border border-primary hover:bg-gray-50 hover:text-primary bg-primary text-gray-50 rounded-md">Register</a>
                        </div>
                     </div>
         </>
