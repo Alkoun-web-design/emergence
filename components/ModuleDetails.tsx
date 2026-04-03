@@ -1,5 +1,5 @@
 // import { div } from "motion/react-client";
-import Speakers from "@/components/Speakers"
+import Speakers from "@/components/SpeakersDetails"
 import {speakers} from '@/lib/modules'
 import Link from "next/link"
 // import type {Module, Speaker} from "@/lib/modules";
@@ -13,7 +13,7 @@ export default function ModuleDetails({name, description, image, price, discount
 
     return (
         <>        
-                     <h1 className="text-3xl grid col-span-full place-items-center">{name}</h1>
+            <h1 className="text-3xl grid col-span-full place-items-center mt-10 mb-4">{name}</h1>
                     <div className="shadow-lg grid grid-cols-subgrid col-start-2 col-end-12 bg-gray-50 rounded-lg p-8 text-gray-900">
 
                         {/* <div className={`col-span-full h-80 md:h-full w-full md:col-span-5 bg-[url(/water-ripples-4.webp)] md:bg-contain bg-no-repeat bg-cover bg-fixed rounded-md`}> */}
@@ -36,7 +36,7 @@ export default function ModuleDetails({name, description, image, price, discount
                        </div>
                     </div>
 
-                    <div className="shadow-lg grid-cols-subgrid col-start-2 col-end-12 lg:col-start-2 lg:col-end-8 bg-gray-50 rounded-lg p-8 text-gray-900">
+                    <div className="shadow-lg grid-cols-subgrid col-start-2 col-end-12 lg:col-start-2 lg:col-end-8 bg-gray-50 rounded-lg p-8 text-gray-900 my-4">
                         <h2 className="text-2xl lg:text-3xl mb-4 border-b-2 border-transparent border-b-gray-300">
                            Guest Supervisors
                         </h2>
@@ -239,7 +239,7 @@ export default function ModuleDetails({name, description, image, price, discount
 
                     </div>
 
-                    <div className="shadow-lg col-start-2 col-end-12 lg:sticky lg:top-16 lg:col-start-8 lg:col-end-12 bg-gray-50 h-fit rounded-lg p-8 text-gray-900">
+                    <div className=" my-4 shadow-lg col-start-2 col-end-12 lg:sticky lg:top-16 lg:col-start-8 lg:col-end-12 bg-gray-50 h-fit rounded-lg p-8 text-gray-900">
                        <h2 className="text-2xl lg:text-3xl border-b-2 border-transparent border-b-gray-300">Format</h2>
                        <ul className="list-disc text-sm md:text-base py-8">
                           <li className="my-2 text-gray-600">10 monthly sessions</li>

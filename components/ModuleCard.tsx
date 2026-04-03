@@ -35,7 +35,7 @@ export default function ModuleCard({ name, image, shortDescription, price, disco
                 <div className="flex flex-row mx-2 overflow-hidden">
                     <p className="my-1 text-xs">Speakers:</p>
                 </div>
-                <div className="flex flex-row mx-2 my-2 overflow-hidden">
+                <div className="flex flex-row mx-2 my-2 overflow-hidden py-1">
                     {filteredSpeakers.map(filteredSpeaker => (
                         // <img key={filteredSpeaker.name} className="h-14 w-14 rounded-full -mr-4" src={filteredSpeaker.image} alt={filteredSpeaker.name} loading="lazy"/>
                         <Image key={filteredSpeaker.name} height={50} width={50} className="rounded-full hover:-translate-y-1 duration-300 transition-all -mr-4" src={filteredSpeaker.image} alt={filteredSpeaker.name} loading="lazy"/>

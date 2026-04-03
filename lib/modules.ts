@@ -163,7 +163,7 @@ export const modules: Module[] = [
             <p className="my-4 text-gray-600 text-sm md:text-base">This series invites practitioners who are willing to engage thoughtfully with their therapeutic work, including moments of uncertainty, stuckness, and emotional complexity. Participants are encouraged to bring curiosity, openness, and a commitment to reflective dialogue.</p>
             <p className="my-4 text-gray-600 text-sm md:text-base">The series offers an opportunity to develop a grounded, relational therapeutic identity within a supportive and intellectually rigorous community.</p>`,
         image: '/water-ripples-4.webp',
-        // image: '/images/workshops/1.jpg',
+        // image: '/images/workshops/1.webp',
         price: '20.00',
         discountPrice: null,
         registration: 'Open',
@@ -194,7 +194,7 @@ export const modules: Module[] = [
             <p className="my-4 text-gray-600 text-sm md:text-base">Call for Participants</p>
             <p className="my-4 text-gray-600 text-sm md:text-base">This series invites practitioners who are willing to engage thoughtfully with their therapeutic work, including moments of uncertainty, stuckness, and emotional complexity. Participants are encouraged to bring curiosity, openness, and a commitment to reflective dialogue.</p>
             <p className="my-4 text-gray-600 text-sm md:text-base">The series offers an opportunity to develop a grounded, relational therapeutic identity within a supportive and intellectually rigorous community.</p>`,
-        image: '/2.jpg',
+        image: '/workshop/1.webp',
         price: '20.00',
         discountPrice: null,
         registration: 'Closed',
@@ -225,7 +225,7 @@ export const modules: Module[] = [
             <p className="my-4 text-gray-600 text-sm md:text-base">Call for Participants</p>
             <p className="my-4 text-gray-600 text-sm md:text-base">This series invites practitioners who are willing to engage thoughtfully with their therapeutic work, including moments of uncertainty, stuckness, and emotional complexity. Participants are encouraged to bring curiosity, openness, and a commitment to reflective dialogue.</p>
             <p className="my-4 text-gray-600 text-sm md:text-base">The series offers an opportunity to develop a grounded, relational therapeutic identity within a supportive and intellectually rigorous community.</p>`,
-        image: '/3.jpg',
+        image: '/workshop3.webp',
         price: '20.00',
         discountPrice: null,
         registration: 'Closed',
@@ -256,7 +256,7 @@ export const modules: Module[] = [
             <p className="my-4 text-gray-600 text-sm md:text-base">Call for Participants</p>
             <p className="my-4 text-gray-600 text-sm md:text-base">This series invites practitioners who are willing to engage thoughtfully with their therapeutic work, including moments of uncertainty, stuckness, and emotional complexity. Participants are encouraged to bring curiosity, openness, and a commitment to reflective dialogue.</p>
             <p className="my-4 text-gray-600 text-sm md:text-base">The series offers an opportunity to develop a grounded, relational therapeutic identity within a supportive and intellectually rigorous community.</p>`,
-        image: '/4.jpg',
+        image: '/workshop4.webp',
         price: '20.00',
         discountPrice: null,
         registration: 'Closed',
@@ -287,7 +287,7 @@ export const modules: Module[] = [
             <p className="my-4 text-gray-600 text-sm md:text-base">Call for Participants</p>
             <p className="my-4 text-gray-600 text-sm md:text-base">This series invites practitioners who are willing to engage thoughtfully with their therapeutic work, including moments of uncertainty, stuckness, and emotional complexity. Participants are encouraged to bring curiosity, openness, and a commitment to reflective dialogue.</p>
             <p className="my-4 text-gray-600 text-sm md:text-base">The series offers an opportunity to develop a grounded, relational therapeutic identity within a supportive and intellectually rigorous community.</p>`,
-        image: '/5.jpg',
+        image: '/workshop5.webp',
         price: '20.00',
         discountPrice: null,
         registration: 'Closed',
@@ -318,7 +318,7 @@ export const modules: Module[] = [
             <p className="my-4 text-gray-600 text-sm md:text-base">Call for Participants</p>
             <p className="my-4 text-gray-600 text-sm md:text-base">This series invites practitioners who are willing to engage thoughtfully with their therapeutic work, including moments of uncertainty, stuckness, and emotional complexity. Participants are encouraged to bring curiosity, openness, and a commitment to reflective dialogue.</p>
             <p className="my-4 text-gray-600 text-sm md:text-base">The series offers an opportunity to develop a grounded, relational therapeutic identity within a supportive and intellectually rigorous community.</p>`,
-        image: '/6.png',
+        image: '/workshop6.webp',
         price: '20.00',
         discountPrice: '15.00',
         registration: 'Closed',
