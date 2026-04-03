@@ -15,16 +15,23 @@ export default function BestSelling() {
                     <ModuleCard 
                         key={module.name}
                         name={module.name} 
-                        description={module.description} 
+                        shortDescription={module.shortDescription} 
                         image={module.image}
+                        registration={module.registration}
+                        dateOfCommencement={module.dateOfCommencement}
                         slug={module.slug}
                         price={module.price}
                         discountPrice={module.discountPrice}
+                        moduleSpeakers={module.speakers}
                     />  
                 ))}
-                <Link href="/modules"><button className="font-semibold w-fit text-nowrap py-4 px-8 my-16 bg-gray-900 text-gray-100 rounded-xl shadow-gray-900/40 hover:shadow-md hover:cursor-pointer hover:bg-[#C1CAA0] hover:-translate-y-1 transition-all duration-300">
-                    Explore Modules
-                </button></Link>
+                <div className="grid col-span-full place-content-center">
+                    <Link href="/modules">
+                        <button className="font-semibold w-fit text-nowrap py-4 px-8 my-16 bg-gray-900 text-gray-100 rounded-xl shadow-gray-900/40 hover:shadow-md hover:cursor-pointer hover:bg-primary hover:-translate-y-1 transition-all duration-300">
+                            Explore Modules
+                        </button>
+                    </Link>
+                </div>
             </div>
         </div>
         </>

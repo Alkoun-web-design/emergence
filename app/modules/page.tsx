@@ -15,11 +15,14 @@ export default function Page() {
             <ModuleCard 
               key={module.name}
               name={module.name} 
-              description={module.description} 
+              shortDescription={module.shortDescription} 
+              registration={module.registration}
+              dateOfCommencement={module.dateOfCommencement}
               image={module.image}
               slug={module.slug}
               price={module.price}
               discountPrice={module.discountPrice}
+              moduleSpeakers={module.speakers}
             />
           ))}
         </div>

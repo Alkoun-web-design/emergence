@@ -16,7 +16,8 @@ export default async function Page({params}: {params: Promise<{ slug: string }>}
                     image={matchingModule.image}
                     price={matchingModule.price}
                     discountPrice={matchingModule.discountPrice}
-                    status={matchingModule.status}
+                    registration={matchingModule.registration}
+                    duration={matchingModule.registration}
                     moduleSpeakers={matchingModule.speakers}     
                 />
             </div>

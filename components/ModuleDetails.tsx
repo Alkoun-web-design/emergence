@@ -1,9 +1,10 @@
 // import { div } from "motion/react-client";
 import Speakers from "@/components/Speakers"
 import {speakers} from '@/lib/modules'
-import type {Module, Speaker} from "@/lib/modules";
+import Link from "next/link"
+// import type {Module, Speaker} from "@/lib/modules";
 
-export default function ModuleDetails({name, description, image, price, discountPrice, status, moduleSpeakers} : {name:string, description:string, image:string, price:string, discountPrice:string | null, status:string, moduleSpeakers: string[]}) {
+export default function ModuleDetails({name, description, image, price, discountPrice, moduleSpeakers, registration, duration} : {name:string, description:string, image:string, price:string, discountPrice:string | null, moduleSpeakers: string[], registration:'Open'|'Closed', duration:string}) {
 
    const speakersSet = new Set(moduleSpeakers)
    const filteredSpeakers = speakers.filter(speaker => speakersSet.has(speaker.name))
@@ -12,7 +13,7 @@ export default function ModuleDetails({name, description, image, price, discount
 
     return (
         <>        
-                  <h1 className="grid col-span-full place-items-center">{name}</h1>
+                     <h1 className="text-3xl grid col-span-full place-items-center">{name}</h1>
                     <div className="shadow-lg grid grid-cols-subgrid col-start-2 col-end-12 bg-gray-50 rounded-lg p-8 text-gray-900">
 
                         {/* <div className={`col-span-full h-80 md:h-full w-full md:col-span-5 bg-[url(/water-ripples-4.webp)] md:bg-contain bg-no-repeat bg-cover bg-fixed rounded-md`}> */}
@@ -21,18 +22,21 @@ export default function ModuleDetails({name, description, image, price, discount
                             {/* <img className="lg:p-4" src={module.image} alt="Workshop Image" /> */}
                         </div>
 
-                        <div className={`${showAll ? 'h-fit col-span-full md:col-span-5 overflow-hidden' : 'h-80 md:h-116 lg:h-160 xl:h-180 col-span-full md:col-span-6 overflow-hidden' } `}><h2 className="text-2xl lg:text-3xl border-b-2 border-transparent border-b-gray-300">Overview</h2>
-                            {status}
+                        <div className={`${showAll ? 'h-fit col-span-full md:col-span-5 overflow-hidden' : 'h-80 md:h-116 lg:h-160 xl:h-180 col-span-full md:col-span-6 overflow-hidden' } `}>
+                           <h2 className="text-2xl lg:text-3xl border-b-2 border-transparent border-b-gray-300">
+                              Overview
+                           </h2>
+                            <p>Registration: {registration}</p>
                             {description}
                         </div>
                         <div className="col-start-7 col-end-12">
-                            <button className="font-semibold text-nowrap text-sm md:text-base cursor-pointer px-4 py-2 transition-all border border-primary hover:bg-gray-50 hover:text-primary bg-primary text-gray-50 rounded-md mx-auto my-4">
+                            <button className="font-semibold text-nowrap text-sm md:text-base hover:cursor-pointer px-6 py-4 my-4 bg-gray-900 hover:text-gray-100 hover:bg-primary hover:-translate-y-1 transition-all duration-300 text-gray-50 rounded-md">
                                 Read More
                             </button>
                        </div>
                     </div>
 
-                    <div className="shadow-lg grid-cols-subgrid col-span-full lg:col-start-2 lg:col-end-8 bg-gray-50 rounded-lg p-8 text-gray-900">
+                    <div className="shadow-lg grid-cols-subgrid col-start-2 col-end-12 lg:col-start-2 lg:col-end-8 bg-gray-50 rounded-lg p-8 text-gray-900">
                         <h2 className="text-2xl lg:text-3xl mb-4 border-b-2 border-transparent border-b-gray-300">
                            Guest Supervisors
                         </h2>
@@ -235,7 +239,7 @@ export default function ModuleDetails({name, description, image, price, discount
 
                     </div>
 
-                    <div className="shadow-lg col-span-full lg:sticky lg:top-16 lg:col-start-8 lg:col-end-12 bg-gray-50 h-fit rounded-lg p-8 text-gray-900">
+                    <div className="shadow-lg col-start-2 col-end-12 lg:sticky lg:top-16 lg:col-start-8 lg:col-end-12 bg-gray-50 h-fit rounded-lg p-8 text-gray-900">
                        <h2 className="text-2xl lg:text-3xl border-b-2 border-transparent border-b-gray-300">Format</h2>
                        <ul className="list-disc text-sm md:text-base py-8">
                           <li className="my-2 text-gray-600">10 monthly sessions</li>
@@ -246,7 +250,9 @@ export default function ModuleDetails({name, description, image, price, discount
                           <li className="my-2 text-gray-600">Sessions are intentionally loosely structured, allowing supervisors and participants to work with what emerges in the relational field. Supervisors model how complexity can be held, reflected upon, and used constructively in therapeutic work.</li>
                        </ul>
                        <div className="flex justify-center my-4">
-                          <a href="https://forms.gle/7wpiJXNioFoaYKtz9" className=" font-semibold text-nowrap text-sm md:text-base cursor-pointer px-6 py-4 transition-all border border-primary hover:bg-gray-50 hover:text-primary bg-primary text-gray-50 rounded-md">Register</a>
+                           <Link href="https://forms.gle/7wpiJXNioFoaYKtz9" className="font-semibold text-nowrap text-sm md:text-base cursor-pointer px-6 py-4 bg-gray-900 hover:text-gray-100 hover:bg-primary hover:-translate-y-1 transition-all duration-300 text-gray-50 rounded-md">
+                              Register
+                           </Link>
                        </div>
                     </div>
       </>

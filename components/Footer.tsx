@@ -9,10 +9,10 @@ export default function Footer() {
 
     return(
         <footer className="grid grid-cols-subgrid col-span-full bg-gray-700 py-10 text-gray-50">
-            <div className="col-start-2 col-end-5 mr-8">
+            <div className="col-start-3 col-end-11 md:col-start-2 md:col-end-5 md:mr-4">
                 <FooterLogo />
             </div>
-            <div className="col-start-5 col-end-7 pt-5">
+            <div className="col-start-3 col-end-11 md:col-start-5 md:col-end-7 pt-5">
                 <h3 className="text-lg font-semibold pb-2">Links</h3>
                 <ul>
                     <Link href="/modules"><li className="py-2 px-4 hover:bg-primary hover:text-gray-50 transition-all duration-300 rounded-lg">All Modules</li></Link>
@@ -20,7 +20,7 @@ export default function Footer() {
                     <Link href="/modules"><li className="py-2 px-4 hover:bg-primary hover:text-gray-50 transition-all duration-300 rounded-lg">Contact Us</li></Link>
                 </ul>
             </div>
-            <div className="col-start-7 col-end-9 pt-5">
+            <div className="col-start-3 col-end-11 md:col-start-7 md:col-end-9 pt-5">
                 <h3 className="text-lg font-semibold  pb-2">Categories</h3>
                 <ul>
                     <Link href="/modules"><li className="py-2 px-4 hover:bg-primary hover:text-gray-50 transition-all duration-300 rounded-lg">Jungian Psychology</li></Link>
@@ -28,7 +28,7 @@ export default function Footer() {
                     <Link href="/modules"><li className="py-2 px-4 hover:bg-primary hover:text-gray-50 transition-all duration-300 rounded-lg">Dreams</li></Link>
                 </ul>
             </div>
-            <div className="col-start-9 col-end-11 pt-5">
+            <div className="col-start-3 col-end-11 md:col-start-9 md:col-end-11 pt-5">
                 <h3 className="text-lg font-semibold pb-2">Legal</h3>
                 <ul>
                     <Link href="/terms-and-conditions"><li className="py-2 px-4 hover:bg-primary hover:text-gray-50 transition-all duration-300 rounded-lg">Terms & Conditions</li></Link>
