@@ -47,10 +47,11 @@ export default function ModuleDetails({name, description, image, price, discount
                 {/* <img className="lg:p-4" src={module.image} alt="Workshop Image" /> */}
             </div>
             <motion.div
-               initial={{opacity: 0}}
-               animate={{opacity: 1, transition: { duration: 0.8 }}}
+               layout
+               // initial={{height: '10rem', overflow: 'hidden'}}
+               // animate={{height: 'fit-content', transition: { duration: 0.8 }}}
                className={`col-span-full md:col-span-5 transition-all duration-300 ease-in-out ${showModuleDetails ? 'h-fit' : 'h-100 overflow-hidden' } `}>
-               <p>Registration: {registration}</p>
+               <p>Registration is {registration}</p>
                <h2 className="text-2xl lg:text-3xl border-b-2 border-transparent border-b-gray-300">
                   Overview
                </h2>
