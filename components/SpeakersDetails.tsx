@@ -1,13 +1,15 @@
 'use client'
 
 import {useState} from 'react'
+import { motion } from 'motion/react'
 
 export default function Speakers({name, image, description} : {name:string, image:string, description:string[]}) {
    
    const [showDetails, setShowDetails] = useState(false)
    
    return (
-        <div className={`py-2 px-2 transition-all duration-500 ease-in-out ${showDetails ? 'h-fit' : 'h-40 overflow-hidden'}`}>
+      //   <motion.div layout className={`py-2 px-2 transition-all duration-500 ease-in-out ${showDetails ? 'h-fit' : 'h-40 overflow-hidden'}`}>
+      <div className='py-2 px-2 transition-all duration-500 ease-in-out h-fit'>
            <div className="border-b-2 border-transparent border-b-gray-300 flex flex-row">
               <div className="justify-start">
                  <img loading="lazy" className="ring-5 ring-primary w-20 h-20 md:w-28 md:h-28 rounded-full" src={image} alt={name} />
@@ -20,9 +22,14 @@ export default function Speakers({name, image, description} : {name:string, imag
                   </button> 
               </div>
            </div>
-           <div className="text-sm md:text-base">
-                {description.map((para:string, index:number) => <p key={index} className="my-4 text-gray-600">{para}</p>) }
-           </div>
+           {showDetails &&
+            <motion.div 
+               initial={{opacity: 0}}
+               animate={{opacity: 1, transition: { duration: 0.8 }}}
+               className="text-sm md:text-base">
+               {description.map((para:string, index:number) => <p key={index} className="my-4 text-gray-600">{para}</p>) }
+           </motion.div>
+           }
         </div>
     )
 }

@@ -8,6 +8,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { auth } from "@/auth";
 import SignedInHeader from "@/components/SignedInHeader";
+import { AnimatePresence } from "motion/react"
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -32,9 +33,9 @@ export default async function RootLayout({
 
   return (
     <html lang="en">
+      <AnimatePresence >
       <body
-        className={`${geistSans.variable} font-light antialiased grid grid-cols-12 gap-6 col-span-full bg-gray-50 text-gray-900`}
-      >
+        className={`${geistSans.variable} font-light antialiased grid grid-cols-12 gap-6 col-span-full bg-gray-50 text-gray-900`}>
         {/* <ClerkProvider> */}
         {/* <div className="fixed -z-20 top-0 left-0 h-screen w-full bg-linear-to-b from-gray-100 via-lime-100 to-lime-200">
           <BackgroundAnimation />
@@ -47,6 +48,7 @@ export default async function RootLayout({
         </main>
         {/* </ClerkProvider> */}
       </body>
+      </AnimatePresence>
     </html>
   );
 }
