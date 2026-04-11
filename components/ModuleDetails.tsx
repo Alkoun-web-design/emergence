@@ -43,7 +43,7 @@ export default function ModuleDetails({name, description, image, price, discount
          <motion.div
             layout 
             // className="shadow-lg grid grid-cols-subgrid col-start-2 col-end-12 bg-gray-100 rounded-lg p-8 text-gray-900 overflow-hidden">
-            className={`shadow-lg grid grid-cols-subgrid col-start-2 col-end-12 bg-gray-50 rounded-lg p-8 text-gray-900 ${showModuleDetails ? 'h-fit' : 'h-140 overflow-hidden' } `}>
+            className={`shadow-lg grid grid-cols-subgrid col-start-2 col-end-12 bg-gray-50 rounded-lg p-8 text-gray-900 ${showModuleDetails ? 'h-fit' : 'h-150 overflow-hidden' } `}>
             {/* <div className={`col-span-full h-80 md:h-full w-full md:col-span-5 bg-[url(/water-ripples-4.webp)] md:bg-contain bg-no-repeat bg-cover bg-fixed rounded-md`}> */}
             <div className='col-span-full h-80 md:h-full w-full md:col-span-5 rounded-md'>
                 <img className="sticky w-full h-auto top-10" src={image} alt="Workshop Image" />
