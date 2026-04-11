@@ -43,16 +43,17 @@ export default function ModuleDetails({name, description, image, price, discount
          <motion.div
             layout 
             // className="shadow-lg grid grid-cols-subgrid col-start-2 col-end-12 bg-gray-100 rounded-lg p-8 text-gray-900 overflow-hidden">
-            className={`shadow-lg grid grid-cols-subgrid col-start-2 col-end-12 bg-gray-50 rounded-lg p-8 text-gray-900 ${showModuleDetails ? 'h-fit' : 'h-150 overflow-hidden' } `}>
+            className='shadow-lg grid grid-cols-subgrid col-start-2 col-end-12 bg-gray-50 rounded-lg p-8 text-gray-900 h-fit'>
             {/* <div className={`col-span-full h-80 md:h-full w-full md:col-span-5 bg-[url(/water-ripples-4.webp)] md:bg-contain bg-no-repeat bg-cover bg-fixed rounded-md`}> */}
-            <div className='col-span-full h-80 md:h-full w-full md:col-span-5 rounded-md'>
+            <div className={`col-span-full md:h-full w-full md:col-span-5 rounded-md ${showModuleDetails ? 'h-fit' : 'h-80 overflow-hidden' } `}>
                 <img className="sticky w-full h-auto top-10" src={image} alt="Workshop Image" />
             </div>
             <motion.div
                layout
                // initial={{height: '10rem', overflow: 'hidden'}}
                // animate={{height: 'fit-content', transition: { duration: 0.8 }}}
-               className={`col-span-full md:col-span-5 ${showModuleDetails ? 'h-fit' : 'h-100 overflow-hidden' } `}>
+               // className={`col-span-full md:col-span-5 ${showModuleDetails ? 'h-fit' : 'h-100 overflow-hidden' } `}
+               className={`col-span-full md:col-span-5 ${showModuleDetails ? 'h-fit' : 'h-30 md:h-120 overflow-hidden' } `}>
                <p>Registration is {registration}</p>
                <h2 className="text-2xl lg:text-3xl border-b-2 border-transparent border-b-gray-300">
                   Overview
@@ -72,7 +73,9 @@ export default function ModuleDetails({name, description, image, price, discount
                {description.audience.map((audience:string, idx:number) => <p key={idx} className="my-4 text-gray-600 text-sm md:text-base">{audience}</p>)}
             </motion.div>
             <div className="col-start-7 col-end-12">
-               <button onClick={() => {setShowModuleDetails(prev => !prev)}}className="font-semibold text-nowrap text-sm md:text-base hover:cursor-pointer px-6 py-4 my-4 bg-gray-900 hover:text-gray-100 hover:bg-primary hover:-translate-y-1 transition-all duration-300 text-gray-50 rounded-md">
+               <button 
+                  onClick={() => {setShowModuleDetails(prev => !prev)}}
+                  className="font-semibold text-nowrap text-sm md:text-base hover:cursor-pointer px-6 py-4 my-4 bg-gray-900 hover:text-gray-100 hover:bg-primary hover:-translate-y-1 transition-all duration-300 text-gray-50 rounded-md">
                   {showModuleDetails ? <p>Read Less</p> : <p>Read More</p>}
                </button>
             </div>
