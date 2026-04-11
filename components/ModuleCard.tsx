@@ -8,9 +8,10 @@ export default function ModuleCard({ name, image, shortDescription, price, disco
 
     return (
         <div className="flex flex-col col-span-12 sm:col-span-6 md:col-span-5 lg:col-span-4 w-full mx-1 rounded-md backdrop-blur-2xl bg-gray-100 shadow-gray-900/30 border border-primary mb-8 hover:shadow-lg hover:-translate-y-1.5 duration-500 transition-all">
-            <div className={`mb-2 h-70 w-full bg-[url(${image})] bg-no-repeat bg-cover`}>
+            {/* <div className={`mb-2 h-70 w-full bg-[url(${image})] bg-no-repeat bg-cover`}> */}
+            <div className='mb-2 h-70 w-full overflow-hidden' >
                 <h3 className="font-semibold text-lg text-gray-100 text-justify leading-6 bg-gray-900/40 p-2">{name}</h3>
-                {/* <img className="object-cover h-76" src={image} alt={name} loading="lazy"/> */}
+                <img className="object-cover w-full" src={image} alt={name} loading="lazy"/>
                 {/* <Image objectFit="cover" width={400} height={120} src={image} alt={name} loading="lazy"/> */}
             </div>
             <div className="p-2">

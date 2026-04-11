@@ -2,8 +2,12 @@
 import ModuleCard from "@/components/ModuleCard"
 import {modules} from "@/lib/modules"
 import type { Module } from "@/lib/modules"
+import { auth } from "@/auth";
+import {headers} from 'next/headers';
 
-export default function Page() {
+
+export default async function Page() {
+
   return (
     <div className="grid grid-cols-subgrid col-span-full bg-gray-50 pb-20">
       <div className="grid grid-cols-subgrid col-span-full justify-content-center">

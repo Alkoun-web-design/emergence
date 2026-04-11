@@ -227,7 +227,7 @@ export const modules: Module[] = [
                 "The series offers an opportunity to develop a grounded, relational therapeutic identity within a supportive and intellectually rigorous community."
             ],
         },
-        image: '/workshop/1.webp',
+        image: '/Sunset-1.jpg',
         price: '20.00',
         discountPrice: null,
         registration: 'Closed',

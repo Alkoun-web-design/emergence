@@ -40,17 +40,19 @@ export default function ModuleDetails({name, description, image, price, discount
    return (
       <>        
          <h1 className="text-center mx-8 mt-20 text-3xl grid col-span-full place-items-center mb-4">{name}</h1>
-         <div className="shadow-lg grid grid-cols-subgrid col-start-2 col-end-12 bg-gray-50 rounded-lg p-8 text-gray-900">
+         <motion.div
+            layout 
+            // className="shadow-lg grid grid-cols-subgrid col-start-2 col-end-12 bg-gray-100 rounded-lg p-8 text-gray-900 overflow-hidden">
+            className={`shadow-lg grid grid-cols-subgrid col-start-2 col-end-12 bg-gray-50 rounded-lg p-8 text-gray-900 ${showModuleDetails ? 'h-fit' : 'h-140 overflow-hidden' } `}>
             {/* <div className={`col-span-full h-80 md:h-full w-full md:col-span-5 bg-[url(/water-ripples-4.webp)] md:bg-contain bg-no-repeat bg-cover bg-fixed rounded-md`}> */}
-            {/* <div className='col-span-full h-80 md:h-full w-full md:col-span-5 rounded-md'> */}
-            <div className={`col-span-full h-80 md:h-full w-full md:col-span-5 bg-[url(${image})] md:bg-contain bg-no-repeat bg-cover bg-fixed rounded-md`}>
-                {/* <img className="lg:p-4" src={module.image} alt="Workshop Image" /> */}
+            <div className='col-span-full h-80 md:h-full w-full md:col-span-5 rounded-md'>
+                <img className="sticky w-full h-auto top-10" src={image} alt="Workshop Image" />
             </div>
             <motion.div
                layout
                // initial={{height: '10rem', overflow: 'hidden'}}
                // animate={{height: 'fit-content', transition: { duration: 0.8 }}}
-               className={`col-span-full md:col-span-5 transition-all duration-300 ease-in-out ${showModuleDetails ? 'h-fit' : 'h-100 overflow-hidden' } `}>
+               className={`col-span-full md:col-span-5 ${showModuleDetails ? 'h-fit' : 'h-100 overflow-hidden' } `}>
                <p>Registration is {registration}</p>
                <h2 className="text-2xl lg:text-3xl border-b-2 border-transparent border-b-gray-300">
                   Overview
@@ -74,7 +76,7 @@ export default function ModuleDetails({name, description, image, price, discount
                   {showModuleDetails ? <p>Read Less</p> : <p>Read More</p>}
                </button>
             </div>
-         </div>
+         </motion.div>
 
          <div className="shadow-lg grid-cols-subgrid col-start-2 col-end-12 lg:col-start-2 lg:col-end-8 bg-gray-50 rounded-lg p-8 text-gray-900 my-4">
             <h2 className="text-2xl lg:text-3xl mb-4 border-b-2 border-transparent border-b-gray-300">
